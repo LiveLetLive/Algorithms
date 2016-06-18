@@ -22,7 +22,8 @@
 //#define UVA_11456_TRAINSORTING
 //#define UVA_100_3NPLUS1
 //#define UVA_11790_MURCIA_SKYLINE
-#define UVA_10213_HOW_MANY_PIECES_OF_LAND
+//#define UVA_10213_HOW_MANY_PIECES_OF_LAND
+#define UVA_436_ARBITRAGEII
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
