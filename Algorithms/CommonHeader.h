@@ -23,7 +23,19 @@
 //#define UVA_100_3NPLUS1
 //#define UVA_11790_MURCIA_SKYLINE
 //#define UVA_10213_HOW_MANY_PIECES_OF_LAND
-#define UVA_436_ARBITRAGEII
+//#define UVA_104_ARBITRAGE
+//#define UVA_436_ARBITRAGEII
+//#define UVA_452_PROJECT_SCHEDULING
+//#define SPOJ_FISHMONGER
+//#define UVA_259_SOFTWARE_ALLOCATION
+//#define UVA_820_INTERNET_BANDWIDTH
+//#define UVA_10480_SABOTAGE
+//#define UVA_11380_DOWN_WENT_THE_TITANIC
+//#define UVA_10459_THE_TREE_ROOT
+
+//#define UVA_12379_CENTRAL_POST_OFFICE
+#define UVA_11506_ANGRY_PROGRAMMER
+
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
