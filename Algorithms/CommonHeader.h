@@ -32,10 +32,29 @@
 //#define UVA_10480_SABOTAGE
 //#define UVA_11380_DOWN_WENT_THE_TITANIC
 //#define UVA_10459_THE_TREE_ROOT
-
 //#define UVA_12379_CENTRAL_POST_OFFICE
-#define UVA_11506_ANGRY_PROGRAMMER
+//#define UVA_11506_ANGRY_PROGRAMMER
+//#define UVA_10801_LIFT_HOPPING
+//#define UVA_988_MANY_PATHS_ONE_DESTINATION
+//#define UVA_11957_CHECKERS
+//#define UVA_12047_HIGHEST_PAID_TOLL
+//#define UVA_10369_ARCTIC_NETWORK
+//#define UVA_12125_MARCH_OF_THE_PENGUINS
+//#define UVA_10278_FIRE_STATION
+//#define UVA_10048_AUDIOPHOBIA
+//#define UVA_10010_WHERE_WALDORF
+//#define UVA_11475_EXTEND_TO_PALINDROMES
+//#define UVA_12467_SECRET_WORD
+//#define UVA_4106_ACORN
+//#define UVA_10507_WAKING_UP_BRAIN
+//#define UVA_11503_VIRTUAL_FRIENDS
+//#define UVA_10341_SOLVE_IT
+//#define UVA_10130_SUPERSALE
+//#define UVA_10819_TROUBLE_OF_13_DOTS
+//#define UVA_10261_FERRY_LOADING
+//#define UVA_1213_SUM_OF_DIFFERENT_PRIMES
 
+#define UVA_10360_RAT_ATTACK
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
