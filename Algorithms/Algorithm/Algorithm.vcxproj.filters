@@ -4,6 +4,12 @@
     <Filter Include="UVA">
       <UniqueIdentifier>{ababf6cb-7349-42aa-96e6-cbaf90f34381}</UniqueIdentifier>
     </Filter>
+    <Filter Include="input">
+      <UniqueIdentifier>{57918804-7817-43e6-80d4-2909af853fce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SPOJ">
+      <UniqueIdentifier>{e409dcc5-e4d1-40d8-a51c-23512f3a8711}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CommonHeader.h" />
@@ -56,8 +62,241 @@
     <ClCompile Include="..\src\uva\UVA_11790_Murcia_Skyline.cpp">
       <Filter>UVA</Filter>
     </ClCompile>
-    <ClCompile Include="UVA_10213_How_Many_Pieces_of_Land.cpp">
+    <ClCompile Include="..\src\uva\UVA_104_Arbitrage.cpp">
       <Filter>UVA</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_436_ArbitrageII.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10213_How_Many_Pieces_of_Land.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_452_Project_Scheduling.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spoj\SPOJ_Fishmonger.cpp">
+      <Filter>SPOJ</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_259_Software_Allocation.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_820_Internet_Bandwidth.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10480_Sabotage.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_11380_Down_Went_The_Titanic.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10459_The_Tree_Root.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_12379_Central_Post_Office.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11506_Angry_Programmer.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10801_Lift_Hopping.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_988_Many_paths_one_destination.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11957_Checkers.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_12047_Highest_Paid_Toll.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10369_Arctic_Network.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_12125_March_of_the_Penguins.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10278_Fire_Station.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10048_Audiophobia.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10010_Where_Waldorf.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_11475_Extend_to_Palindromes.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_12467_Secret_word.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_4106_ACORN.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10507_Waking_up_brain.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_11503_Virtual_Friends.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10341_Solve_It.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10130_SuperSale.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10819_Trouble_of_13_Dots.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10261_Ferry_Loading.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_1213_Sum_of_Different_Primes.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10360_Rat_Attack.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11456_Trainsorting.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVa_1056_Degree_Of_Seperation.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_1203_ARGUS.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11367_FULLTANK.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_469_Wetlands_of_Florida.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11790_Murcia_Skyline.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVa_481_WhatGoesUp.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11951_AREA.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_108_MAXIMUM_SUM.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_103_STACKING_BOXES.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11450_WEDDING_SHOPPING.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10285_LONGEST_RUN_ON_SNOWBOARD.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_100_3NPLUS1.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11906_Knight_in_War_Grid.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_436_ArbitrageII.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_104_Arbitrage.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_452_Project_Scheduling.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\SPOJ_FISHMONGER.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_259_SOFTWARE_ALLOCATION.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_820_Internet_Bandwidth.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10480_Sabotage.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVa_11380_Down_Went_The_Titanic.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10459_The_Tree_Root.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_12379_Central_Post_Office.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11506_Angry_Programmer.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10801_Lift_Hopping.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_988_Many_paths_one_destination.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11957_Checkers.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_12047_Highest_Paid_Toll.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10369_Arctic_Network.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_12125_March_of_the_Penguins.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10278_Fire_Station.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10048_Audiophobia.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10010_Where_Waldorf.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVa_11475_Extend_to_Palindromes.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVa_12467_Secret_word.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_4106_ACORN.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10507_WAKING_UP_BRAIN.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVa_11503_Virtual_Friends.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10341_Solve_It.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10130_SuperSale.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10819_Trouble_of_13_Dots.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10261_Ferry_Loading.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_1213_Sum_of_Different_Primes.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10360_Rat_Attack.txt">
+      <Filter>input</Filter>
+    </Text>
   </ItemGroup>
 </Project>
