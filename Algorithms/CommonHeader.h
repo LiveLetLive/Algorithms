@@ -2,7 +2,7 @@
 #define _CRT_SECURE_NO_DEPRECATE // suppress some compilation warning messages (for VC++ users)
 #define _CRT_SECURE_NO_WARNINGS
 #define  _SCL_SECURE_NO_WARNINGS
- 
+
 #include "ConsoleColor.h"
 
 /**************************************ad-hoc Algorithm*************************************************/
@@ -53,8 +53,13 @@
 //#define UVA_10819_TROUBLE_OF_13_DOTS
 //#define UVA_10261_FERRY_LOADING
 //#define UVA_1213_SUM_OF_DIFFERENT_PRIMES
+//#define UVA_10360_RAT_ATTACK
+//#define UVA_10911_FORMING_QUIZ_TEAMS
+//#define UVA_10364_SQUARE
+//#define UVA_11391_BLOBS_IN_THE_BOARD
+//#define UVA_1099_SHARING_CHOCOLATE
 
-#define UVA_10360_RAT_ATTACK
+#define UVA_10003_CUTTING_STICKS
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
