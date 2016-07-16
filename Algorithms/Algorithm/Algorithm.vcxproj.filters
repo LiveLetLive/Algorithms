@@ -158,6 +158,21 @@
     <ClCompile Include="..\src\uva\UVA_10360_Rat_Attack.cpp">
       <Filter>UVA</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10911_Forming_Quiz_Teams.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10364_Square.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_11391_Blobs_in_the_Board.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_1099_Sharing_Chocolate.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10003_Cutting_Sticks.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
@@ -296,6 +311,21 @@
       <Filter>input</Filter>
     </Text>
     <Text Include="..\input\UVA_10360_Rat_Attack.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10911_Forming_Quiz_Teams.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10364_Square.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVa_11391_Blobs_in_the_Board.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVa_1099_Sharing_Chocolate.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10003_CUTTING_STICKS.txt">
       <Filter>input</Filter>
     </Text>
   </ItemGroup>
