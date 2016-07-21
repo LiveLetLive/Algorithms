@@ -173,6 +173,21 @@
     <ClCompile Include="..\src\uva\UVA_10003_Cutting_Sticks.cpp">
       <Filter>UVA</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10496_Collecting_Beepers.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_216_Getting_in_Line.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_10898_Combo_Deal.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11284_Shopping_Trip.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_562_Dividing_coins.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
@@ -326,6 +341,21 @@
       <Filter>input</Filter>
     </Text>
     <Text Include="..\input\UVA_10003_CUTTING_STICKS.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10496_Collecting_Beepers.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_216_Getting_in_Line.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVa_10898_Combo_Deal.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11284_Shopping_Trip.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_562_Dividing_coins.txt">
       <Filter>input</Filter>
     </Text>
   </ItemGroup>

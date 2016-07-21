@@ -58,8 +58,13 @@
 //#define UVA_10364_SQUARE
 //#define UVA_11391_BLOBS_IN_THE_BOARD
 //#define UVA_1099_SHARING_CHOCOLATE
+//#define UVA_10003_CUTTING_STICKS
+//#define UVA_10496_COLLECTING_BEEPERS
+//#define UVA_216_GETTING_IN_LINE
+//#define UVA_10898_COMBO_DEAL
+//#define UVA_11284_SHOPPING_TRIP
 
-#define UVA_10003_CUTTING_STICKS
+#define UVA_562_DIVIDING_COINS
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
