@@ -241,6 +241,7 @@
     <ClCompile Include="..\src\uva\UVA_988_Many_paths_one_destination.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_990_Diving_for_Gold.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\SPOJ_FISHMONGER.txt" />
@@ -299,6 +300,7 @@
     <Text Include="..\input\UVA_562_Dividing_coins.txt" />
     <Text Include="..\input\UVA_820_Internet_Bandwidth.txt" />
     <Text Include="..\input\UVA_988_Many_paths_one_destination.txt" />
+    <Text Include="..\input\UVA_990_Diving_for_Gold.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

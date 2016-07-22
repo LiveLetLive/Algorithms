@@ -188,6 +188,9 @@
     <ClCompile Include="..\src\uva\UVA_562_Dividing_coins.cpp">
       <Filter>UVA</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_990_Diving_for_Gold.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
@@ -356,6 +359,9 @@
       <Filter>input</Filter>
     </Text>
     <Text Include="..\input\UVA_562_Dividing_coins.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_990_Diving_for_Gold.txt">
       <Filter>input</Filter>
     </Text>
   </ItemGroup>
