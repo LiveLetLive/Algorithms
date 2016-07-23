@@ -141,6 +141,7 @@
     <ClCompile Include="..\src\uva\UVa_1056_Degree_Of_Seperation.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10616_Divisible_Group_Sums.cpp" />
     <ClCompile Include="..\src\uva\UVA_10801_Lift_Hopping.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -181,9 +182,7 @@
     <ClCompile Include="..\src\uva\UVa_11503_Virtual_Friends.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_11506_Angry_Programmer.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11506_Angry_Programmer.cpp" />
     <ClCompile Include="..\src\uva\UVA_11790_Murcia_Skyline.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -215,7 +214,9 @@
     <ClCompile Include="..\src\uva\UVa_12467_Secret_word.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_216_Getting_in_Line.cpp" />
+    <ClCompile Include="..\src\uva\UVA_216_Getting_in_Line.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_259_Software_Allocation.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -234,14 +235,18 @@
     <ClCompile Include="..\src\uva\UVa_481_WhatGoesUp.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_562_Dividing_coins.cpp" />
+    <ClCompile Include="..\src\uva\UVA_562_Dividing_coins.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_820_Internet_Bandwidth.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_988_Many_paths_one_destination.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_990_Diving_for_Gold.cpp" />
+    <ClCompile Include="..\src\uva\UVA_990_Diving_for_Gold.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\SPOJ_FISHMONGER.txt" />
@@ -265,6 +270,7 @@
     <Text Include="..\input\UVA_104_Arbitrage.txt" />
     <Text Include="..\input\UVA_10507_WAKING_UP_BRAIN.txt" />
     <Text Include="..\input\UVa_1056_Degree_Of_Seperation.txt" />
+    <Text Include="..\input\UVA_10616_Divisible_Group_Sums.txt" />
     <Text Include="..\input\UVA_10801_Lift_Hopping.txt" />
     <Text Include="..\input\UVA_10819_Trouble_of_13_Dots.txt" />
     <Text Include="..\input\UVa_10898_Combo_Deal.txt" />
