@@ -3,7 +3,7 @@
 #ifdef UVA_11284_SHOPPING_TRIP
 READ_INPUT(UVA_11284_SHOPPING_TRIP)
 
-// Solved, all debug inputs are working well, but final submission is WA.
+	// Solved, all debug inputs are working well, but final submission is WA.
 
 #include <iostream>
 #include <algorithm>
@@ -16,22 +16,23 @@ READ_INPUT(UVA_11284_SHOPPING_TRIP)
 
 	using namespace std;
 
+typedef long long ll;
 #define FOR(i, init, count) for(int i = init; i < count; i++)
 #define MAXN 55
 #define MAXP 13
-#define INF 0x3FFFFFFF
+#define INF 0xfffffffffLL
 
 int N, M, P;
 
-double gas[MAXN][MAXN];
+ll gas[MAXN][MAXN];
 
-double save[MAXN];
-double sSort[MAXP];
+ll save[MAXN];
+ll sSort[MAXP];
 int sSortIndex[MAXP];
 
-double dp[1<<MAXP][MAXP];
+ll dp[1<<MAXP][MAXP];
 
-double gAns = 0;
+int gAns = 0;
 void reset()
 {
 	gAns = 0;
@@ -51,14 +52,14 @@ void reset()
 		dp[i][j] = -INF;
 }
 
-double solve(int remLoc, int curr, int n)
+ll solve(int remLoc, int curr, int n)
 {
 	if(remLoc == 0) return 0;
 
 	if(dp[remLoc][curr] != -INF)
 		return dp[remLoc][curr];
 
-	double ans = -INF, tmp;
+	ll ans = -INF, tmp;
 
 	FOR(i, 0, n+1)
 		if((remLoc & (1 << i)) != 0 && i != curr)
@@ -94,10 +95,10 @@ int main()
 		FOR(i, 0, M)
 		{
 			int x, y;
-			double c;
-			scanf("%d %d %lf", &x, &y, &c);
+			int a, b;
+			scanf("%d %d %d.%d", &x, &y, &a, &b);
 
-			gas[x][y] = min(gas[x][y], c);
+			gas[x][y] = min(gas[x][y], (ll)(a*100 + b));
 			gas[y][x] = gas[x][y];
 		}
 
@@ -105,11 +106,10 @@ int main()
 
 		FOR(i, 0, P)
 		{
-			int x;
-			double tmp;
+			int x, a, b;
 			scanf("%d ", &x);
-			scanf("%lf ", &tmp);
-			save[x] += tmp;
+			scanf("%d.%d ", &a, &b);
+			save[x] += (ll)(a*100+b);
 		}
 
 		int idx = 0;
@@ -129,15 +129,18 @@ int main()
 			gas[i][j] = min(gas[i][j], gas[i][k] + gas[k][j]);
 		}
 
-		gAns = 0.0;
+		gAns = 0;
 
-		double ans = solve((1<<(idx+1))-1, 0, idx);
+		ll ans = solve((1<<(idx+1))-1, 0, idx);
 
 		if(gAns <= 0.0)
 			printf("Don't leave the house\n");
 		else
-			printf("Daniel can save $%.2lf\n", gAns);
+		{
+			int t1 = gAns % 100;
+			printf("Daniel can save $%ld.%02ld\n", gAns/100, t1);
+		}
 	}
-	return 0; 
+	return 0;  
 } 
 #endif

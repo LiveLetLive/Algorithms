@@ -11,9 +11,9 @@ READ_INPUT(UVA_11506_ANGRY_PROGRAMMER)
 	using namespace std;
 
 
-#define MAXN (51*2)
+#define MAXN (105)
 #define FOR(i, init, count) for(int i = init; i < count; i++)
-#define INF 1000000000
+#define INF 0x7FFFFFFF
 int g[MAXN][MAXN];
 int p[MAXN];
 int dist[MAXN];
@@ -89,7 +89,7 @@ void maxflow()
 		int f = INF;
 		augment(M, f);
 
-		if(f == 0)
+		if(f == 0 || f == INF)
 			break;
 
 		mf += f;
@@ -113,6 +113,7 @@ int main()
 			scanf("%d %d ", &n, &cost);
 
 			g[n][M+n] = cost;
+			g[M+n][n] = cost;
 		}
 
 		FOR(i, 0, W)

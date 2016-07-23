@@ -18,7 +18,6 @@ READ_INPUT(UVA_10261_FERRY_LOADING)
 #define MAXN 505
 #define MAXM 10205
 
-
 int T;
 int FerrLen = 0;
 int cIndex = 0;
@@ -26,7 +25,7 @@ int CLen[MAXN];
 int SumLen[MAXN];
 
 int dp[205][10005];
-int pre[205][10005];
+int alloc[205][10005];
 int	maxID = 0;
 int	maxLen = 0;
 
@@ -37,62 +36,31 @@ void reset()
 	maxLen = 0;
 	FOR(i, 0, 205)
 		FOR(j, 0, 10005)
-		dp[i][j] = -1, pre[i][j] = 0;
-
+		dp[i][j] = -1, alloc[i][j] = -1;
 }
 
-void allocate(int id, int lVol)
+int allocate(int id, int lVol, int d)
 {
-	if(id > cIndex) 
-		return;
+	if(id > cIndex)
+		return d-1;
 
-	//if(dp[id][lVol] != -1)
-	//	return;
+	if(lVol > FerrLen || ((SumLen[id-1] - lVol) > FerrLen))
+		return d-1;
 
-	/*if(lVol > FerrLen || rVol > FerrLen) 
-	return id-1;
-	*/
-	if(lVol+CLen[id] <= FerrLen)
-	{
-		dp[id][lVol] = 1;
-		pre[id][lVol] = 0;
-		maxID = max(maxID, id);
-		maxLen = max(maxLen, lVol);
+	if(dp[id][lVol] != -1)
+		return dp[id][lVol];
 
-		printf("id:%d, lVol:%d, dp[id][lVol]: %d, pre[id][lVol]: %d\n",
-			id, 
-			lVol, 
-			dp[id][lVol],
-			pre[id][lVol]
-		);	
-		//Left	
-		allocate(id + 1, lVol + CLen[id]);
+	int ans1 = 0, ans2 = 0;
 
+	ans1 = allocate(id + 1, lVol + CLen[id], d+1);
+	ans2 = allocate(id + 1, lVol, d+1);
 
-	}
+	if(ans1 > ans2)
+		alloc[id][lVol] = 0, dp[id][lVol] = ans1;
+	else
+		alloc[id][lVol] = 1, dp[id][lVol] = ans2;
 
-	if((SumLen[id] - lVol) <= FerrLen)
-	{
-		dp[id][lVol] = 1;
-		pre[id][lVol] = 1;
-		maxID = max(maxID, id);
-		maxLen = max(maxLen, lVol);
-		printf("id:%d, lVol:%d, dp[id][lVol]: %d, pre[id][lVol]: %d\n",
-			id, 
-			lVol, 
-			dp[id][lVol],
-			pre[id][lVol]
-		);
-		//Right
-		allocate(id + 1, lVol);
-
-	}
-	return;
-}
-
-void solve()
-{
-	allocate(0, 0);
+	return dp[id][lVol];
 }
 
 int main()
@@ -120,7 +88,34 @@ int main()
 			cIndex++;
 		}
 
-		solve();
+		int ans = 0;
+		if(cIndex == 0 || FerrLen == 0)
+		{
+			if(t) puts("");
+			printf("%d\n", ans);
+		}
+		else
+		{
+			ans = allocate(1, CLen[0], 0);	
+			ans++;
+
+			if(t) puts("");
+
+			printf("%d\n", ans);
+
+			int idx = 0;
+			int vol = 0;
+
+			alloc[0][0] = 0;
+
+			FOR(i, 0, ans)
+			{
+				if(alloc[idx][vol] == 0)
+					printf("port\n"), vol += CLen[idx], idx++;
+				else if(alloc[idx][vol] == 1)
+					printf("starboard\n"), idx++;
+			}
+		}
 	}
 
 	return 0;
