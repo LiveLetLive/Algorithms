@@ -64,8 +64,8 @@
 //#define UVA_10898_COMBO_DEAL
 //#define UVA_11284_SHOPPING_TRIP
 //#define UVA_562_DIVIDING_COINS
-
-#define UVA_990_DIVING_FOR_GOLD
+//#define UVA_990_DIVING_FOR_GOLD
+#define UVA_10616_DIVISIBLE_GROUP_SUMS
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
