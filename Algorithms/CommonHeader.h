@@ -65,7 +65,10 @@
 //#define UVA_11284_SHOPPING_TRIP
 //#define UVA_562_DIVIDING_COINS
 //#define UVA_990_DIVING_FOR_GOLD
-#define UVA_10616_DIVISIBLE_GROUP_SUMS
+//#define UVA_10616_DIVISIBLE_GROUP_SUMS
+//#define SELF_MAX_COVER
+
+#define UVA_836_LARGEST_SUBMATRIX
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
