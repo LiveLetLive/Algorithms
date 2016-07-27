@@ -81,6 +81,7 @@
     <ClCompile Include="..\src\spoj\SPOJ_Fishmonger.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\Self_Max_Cover.cpp" />
     <ClCompile Include="..\src\uva\UVa 103_Stacking_Boxes.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -141,7 +142,9 @@
     <ClCompile Include="..\src\uva\UVa_1056_Degree_Of_Seperation.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10616_Divisible_Group_Sums.cpp" />
+    <ClCompile Include="..\src\uva\UVA_10616_Divisible_Group_Sums.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10801_Lift_Hopping.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -160,7 +163,9 @@
     <ClCompile Include="..\src\uva\UVa_1099_Sharing_Chocolate.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_11284_Shopping_Trip.cpp" />
+    <ClCompile Include="..\src\uva\UVA_11284_Shopping_Trip.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_11367_Fulltank.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -241,6 +246,7 @@
     <ClCompile Include="..\src\uva\UVA_820_Internet_Bandwidth.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_836_Largest_Submatrix.cpp" />
     <ClCompile Include="..\src\uva\UVA_988_Many_paths_one_destination.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -305,8 +311,10 @@
     <Text Include="..\input\UVa_481_WhatGoesUp.txt" />
     <Text Include="..\input\UVA_562_Dividing_coins.txt" />
     <Text Include="..\input\UVA_820_Internet_Bandwidth.txt" />
+    <Text Include="..\input\UVA_836_Largest_Submatrix.txt" />
     <Text Include="..\input\UVA_988_Many_paths_one_destination.txt" />
     <Text Include="..\input\UVA_990_Diving_for_Gold.txt" />
+    <Text Include="..\src\uva\Self_Chip_Selection.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

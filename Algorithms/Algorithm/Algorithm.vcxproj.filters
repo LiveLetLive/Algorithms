@@ -194,6 +194,12 @@
     <ClCompile Include="..\src\uva\UVA_10616_Divisible_Group_Sums.cpp">
       <Filter>UVA</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_836_Largest_Submatrix.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\Self_Max_Cover.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
@@ -368,6 +374,12 @@
       <Filter>input</Filter>
     </Text>
     <Text Include="..\input\UVA_10616_Divisible_Group_Sums.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\src\uva\Self_Chip_Selection.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_836_Largest_Submatrix.txt">
       <Filter>input</Filter>
     </Text>
   </ItemGroup>
