@@ -67,8 +67,9 @@
 //#define UVA_990_DIVING_FOR_GOLD
 //#define UVA_10616_DIVISIBLE_GROUP_SUMS
 //#define SELF_MAX_COVER
+//#define UVA_836_LARGEST_SUBMATRIX
 
-#define UVA_836_LARGEST_SUBMATRIX
+#define UVA_983_LOCALIZED_SUMMING_FOR_BLURRING
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
