@@ -1,11 +1,12 @@
 #include "CommonHeader.h"
 
-#ifdef UVA_836_LARGEST_SUBMATRIX
-READ_INPUT(UVA_836_LARGEST_SUBMATRIX)
+//#ifdef UVA_836_LARGEST_SUBMATRIX
+#if 1
+//READ_INPUT(UVA_836_LARGEST_SUBMATRIX)
 
 #include <iostream>
 #include <algorithm>
-#include <string>
+#include <string.h>
 #include <math.h>
 #include <float.h>
 #include <queue>
@@ -21,13 +22,12 @@ typedef long long ll;
 
 int N, M, T;
 char gr[MAXN][MAXN];
-int dp[MAXN][MAXN];
 
 void reset()
 {
 	FOR(i, 0, MAXN)
 		FOR(j, 0, MAXN)
-		gr[i][j] = 0, dp[i][j] = 0;
+		gr[i][j] = 0;
 }
 
 int solve()
@@ -37,9 +37,17 @@ int solve()
 
 void PrintGrid()
 {
-	FOR(i, 0, N+1)
-		printf("%s\n", gr[i]);
+	FOR(i, 0, N)
+	{
+		FOR(j, 0, N)
+			printf("%2d ", gr[i][j]);
+		printf("\n");
+	}
+
+	printf("//////\n");
 }
+
+
 
 int main()
 {
@@ -49,18 +57,55 @@ int main()
 	{
 		int idx = 0;
 		reset();
-		while(scanf("%s ", &gr[idx]))
-			if(gr[idx++][0] == 0)
-				break;
 
-		N = idx - 1;
-		FOR(i, 1, N+1)
-			FOR(j, 1, N+1)
-			dp[i][j] = gr[i-1][j-1] - '0';
+		//scanf("%*s");
+		scanf("%s ", &gr[idx++]);
 
-		PrintGrid();
-		solve();
-		printf("%d\n", 0); 
+		int len1 = strlen(gr[0]);
+
+		FOR(i, 1, len1)
+			scanf("%s ", &gr[idx++]);
+
+		N = idx;
+		FOR(i, 0, N)
+			FOR(j, 0, N)
+			gr[i][j] -= '0';
+
+		int maxSum = 0;
+		int currSum = -1;
+		int maxL, maxT, maxR, maxB;
+
+		int maxrect = -1;
+
+		FOR(l, 0, N)
+		{
+			int sum[MAXN] = {};
+			FOR(r, l, N)
+			{
+				FOR(i, 0, N)
+					sum[i] += gr[i][r];
+
+				currSum = 0;
+				int currT = 0;
+				int ht = 0;
+				int width = r-l+1;
+				FOR(k, 0, N)
+				{
+
+					if(currSum != width*ht) 
+						currSum = 0, ht = 0;
+
+					currSum += sum[k];
+					ht++;
+
+					if(currSum > maxSum && currSum == width*ht)
+						maxL = l, maxR = r, maxT = k - ht + 1, maxB = k, maxSum = currSum;
+				}
+			}
+		}
+
+		printf("%d\n", maxSum);
+		if(t < (T1-1)) printf("\n");
 	}
 	return 0;  
 } 
