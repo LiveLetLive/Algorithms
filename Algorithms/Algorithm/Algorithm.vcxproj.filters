@@ -200,6 +200,18 @@
     <ClCompile Include="..\src\uva\Self_Max_Cover.cpp">
       <Filter>UVA</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_983_Localized_Summing_for_Blurring.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10667_Largest_Block.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10827_Maximum_sum_on_a_torus.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10074_Take_the_Land.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
@@ -380,6 +392,18 @@
       <Filter>input</Filter>
     </Text>
     <Text Include="..\input\UVA_836_Largest_Submatrix.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_983_Localized_Summing_for_Blurring.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10667_Largest_Block.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10827_Maximum_sum_on_a_torus.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10074_Take_the_Land.txt">
       <Filter>input</Filter>
     </Text>
   </ItemGroup>

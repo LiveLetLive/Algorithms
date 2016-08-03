@@ -81,7 +81,9 @@
     <ClCompile Include="..\src\spoj\SPOJ_Fishmonger.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\Self_Max_Cover.cpp" />
+    <ClCompile Include="..\src\uva\Self_Max_Cover.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVa 103_Stacking_Boxes.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -94,6 +96,7 @@
     <ClCompile Include="..\src\uva\UVA_10048_Audiophobia.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10074_Take_the_Land.cpp" />
     <ClCompile Include="..\src\uva\UVA_100_3NPLUS1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -145,10 +148,16 @@
     <ClCompile Include="..\src\uva\UVA_10616_Divisible_Group_Sums.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10667_Largest_Block.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10801_Lift_Hopping.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10819_Trouble_of_13_Dots.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10827_Maximum_sum_on_a_torus.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVa_10898_Combo_Deal.cpp">
@@ -187,7 +196,9 @@
     <ClCompile Include="..\src\uva\UVa_11503_Virtual_Friends.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_11506_Angry_Programmer.cpp" />
+    <ClCompile Include="..\src\uva\UVA_11506_Angry_Programmer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_11790_Murcia_Skyline.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -246,7 +257,12 @@
     <ClCompile Include="..\src\uva\UVA_820_Internet_Bandwidth.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_836_Largest_Submatrix.cpp" />
+    <ClCompile Include="..\src\uva\UVA_836_Largest_Submatrix.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_983_Localized_Summing_for_Blurring.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_988_Many_paths_one_destination.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -259,6 +275,7 @@
     <Text Include="..\input\UVA_10003_CUTTING_STICKS.txt" />
     <Text Include="..\input\UVA_10010_Where_Waldorf.txt" />
     <Text Include="..\input\UVA_10048_Audiophobia.txt" />
+    <Text Include="..\input\UVA_10074_Take_the_Land.txt" />
     <Text Include="..\input\UVA_100_3NPLUS1.txt" />
     <Text Include="..\input\UVA_10130_SuperSale.txt" />
     <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt" />
@@ -277,8 +294,10 @@
     <Text Include="..\input\UVA_10507_WAKING_UP_BRAIN.txt" />
     <Text Include="..\input\UVa_1056_Degree_Of_Seperation.txt" />
     <Text Include="..\input\UVA_10616_Divisible_Group_Sums.txt" />
+    <Text Include="..\input\UVA_10667_Largest_Block.txt" />
     <Text Include="..\input\UVA_10801_Lift_Hopping.txt" />
     <Text Include="..\input\UVA_10819_Trouble_of_13_Dots.txt" />
+    <Text Include="..\input\UVA_10827_Maximum_sum_on_a_torus.txt" />
     <Text Include="..\input\UVa_10898_Combo_Deal.txt" />
     <Text Include="..\input\UVA_108_MAXIMUM_SUM.txt" />
     <Text Include="..\input\UVA_10911_Forming_Quiz_Teams.txt" />
@@ -312,6 +331,7 @@
     <Text Include="..\input\UVA_562_Dividing_coins.txt" />
     <Text Include="..\input\UVA_820_Internet_Bandwidth.txt" />
     <Text Include="..\input\UVA_836_Largest_Submatrix.txt" />
+    <Text Include="..\input\UVA_983_Localized_Summing_for_Blurring.txt" />
     <Text Include="..\input\UVA_988_Many_paths_one_destination.txt" />
     <Text Include="..\input\UVA_990_Diving_for_Gold.txt" />
     <Text Include="..\src\uva\Self_Chip_Selection.txt" />
