@@ -21,12 +21,13 @@ typedef long long ll;
 
 int N, M, T;
 int gr[MAXN][MAXN];
+int ans[MAXN][MAXN];
 
 void reset()
 {
 	FOR(i, 0, MAXN)
 		FOR(j, 0, MAXN)
-		gr[i][j] = 0;
+		gr[i][j] = 0, ans[i][j] = 0;
 }
 
 void PrintGrid()
@@ -45,15 +46,17 @@ void PrintGrid()
 
 int main()
 {
+	int t = 0;
 
 	while(scanf("%d %d ", &N, &M) == 2)
 	{
+		if(t++ > 0 ) printf("\n");
 		reset();
 		for(int j = N-1; j >= 0; j--)
 			FOR(i, 0, N)
 			scanf("%d ", &gr[j][i]);
 
-		PrintGrid();
+		//PrintGrid();
 
 		FOR(i, 0, N) FOR(j, 0, N)
 		{
@@ -62,17 +65,32 @@ int main()
 			if(i > 0 && j > 0) gr[i][j] -= gr[i-1][j-1];
 		}
 
-		PrintGrid();
+		//PrintGrid();
 
-		FOR(i, M-1, N) FOR(j, M-1, N)
+		FOR(i, 0, N-M+1) FOR(j, 0, N-M+1)
 		{
-			int m = i - (M-1);
-			int n = j - (M-1);
+			int m = i + (M-1);
+			int n = j + (M-1);
 
+			ans[i][j] += gr[m][n];
 
+			if((m-M) >= 0) ans[i][j] -= gr[m-M][n];
+			if((n-M) >= 0) ans[i][j] -= gr[m][n-M];
+			if((m-M) >= 0 && (n-M) >= 0) ans[i][j] += gr[m-M][n-M];
 		}
 
-		printf("%d\n", maxSum);
+		int sum = 0;
+		int x = 0;
+		int y = N-M+1;
+
+		for(int i = y-1; i >= 0; i--)
+			FOR(j, 0, y)
+		{
+			printf("%d\n", ans[i][j]);
+			sum += ans[i][j];
+		}
+		printf("%d\n", sum);
+
 	}
 	return 0;  
 } 

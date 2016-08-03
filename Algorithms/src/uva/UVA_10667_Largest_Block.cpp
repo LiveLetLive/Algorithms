@@ -1,7 +1,7 @@
 #include "CommonHeader.h"
 
-#ifdef UVA_836_LARGEST_SUBMATRIX
-READ_INPUT(UVA_836_LARGEST_SUBMATRIX)
+#ifdef UVA_10667_LARGEST_BLOCK
+READ_INPUT(UVA_10667_LARGEST_BLOCK)
 
 #include <iostream>
 #include <algorithm>
@@ -16,7 +16,7 @@ READ_INPUT(UVA_836_LARGEST_SUBMATRIX)
 
 typedef long long ll;
 #define FOR(i, init, count) for(int i = init; i < count; i++)
-#define MAXN 28
+#define MAXN 102
 #define INF 0xfffffffffLL
 
 int N, M, T;
@@ -26,14 +26,8 @@ void reset()
 {
 	FOR(i, 0, MAXN)
 		FOR(j, 0, MAXN)
-		gr[i][j] = 0;
+		gr[i][j] = 1;
 }
-
-int solve()
-{
-	return 0;
-}
-
 void PrintGrid()
 {
 	FOR(i, 0, N)
@@ -55,20 +49,24 @@ int main()
 	FOR(t, 0, T1)
 	{
 		int idx = 0;
+		int B = 0;
 		reset();
 
-		//scanf("%*s");
-		scanf("%s ", &gr[idx++]);
+		scanf("%d ", &N);
+		scanf("%d ", &B);
 
-		int len1 = strlen(gr[0]);
 
-		FOR(i, 1, len1)
-			scanf("%s ", &gr[idx++]);
+		FOR(x, 0, B)
+		{
+			int i0, i1, j0, j1;
 
-		N = idx;
-		FOR(i, 0, N)
-			FOR(j, 0, N)
-			gr[i][j] -= '0';
+			scanf("%d %d %d %d ", &i0, &j0, &i1, &j1);
+			i0--, j0--, i1--, j1--;
+
+			FOR(i, i0, i1+1)
+				FOR(j, j0, j1+1)
+				gr[i][j] = 0;
+		}
 
 		int maxSum = 0;
 		int currSum = -1;
@@ -104,7 +102,6 @@ int main()
 		}
 
 		printf("%d\n", maxSum);
-		if(t < (T1-1)) printf("\n");
 	}
 	return 0;  
 } 
