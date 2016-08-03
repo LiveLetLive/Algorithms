@@ -68,8 +68,11 @@
 //#define UVA_10616_DIVISIBLE_GROUP_SUMS
 //#define SELF_MAX_COVER
 //#define UVA_836_LARGEST_SUBMATRIX
+//#define UVA_983_LOCALIZED_SUMMING_FOR_BLURRING
+//#define UVA_10667_LARGEST_BLOCK
+//#define UVA_10827_MAXIMUM_SUM_ON_A_TORUS
 
-#define UVA_983_LOCALIZED_SUMMING_FOR_BLURRING
+#define UVA_10074_TAKE_THE_LAND
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
