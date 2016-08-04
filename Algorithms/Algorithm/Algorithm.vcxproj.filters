@@ -212,6 +212,12 @@
     <ClCompile Include="..\src\uva\UVA_10074_Take_the_Land.cpp">
       <Filter>UVA</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10306_e_Coins.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_674_Coin_Change.cpp">
+      <Filter>UVA</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
@@ -404,6 +410,12 @@
       <Filter>input</Filter>
     </Text>
     <Text Include="..\input\UVA_10074_Take_the_Land.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10306_e_Coins.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_674_Coin_Change.txt">
       <Filter>input</Filter>
     </Text>
   </ItemGroup>

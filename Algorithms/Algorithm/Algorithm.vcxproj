@@ -52,7 +52,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <StackReserveSize>8000000</StackReserveSize>
+      <StackReserveSize>1048576</StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -115,6 +115,7 @@
     <ClCompile Include="..\src\uva\UVA_10285_Longest_run_on_Snowboard.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10306_e_Coins.cpp" />
     <ClCompile Include="..\src\uva\UVA_10341_Solve_It.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -254,6 +255,7 @@
     <ClCompile Include="..\src\uva\UVA_562_Dividing_coins.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_674_Coin_Change.cpp" />
     <ClCompile Include="..\src\uva\UVA_820_Internet_Bandwidth.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -282,6 +284,7 @@
     <Text Include="..\input\UVA_10261_Ferry_Loading.txt" />
     <Text Include="..\input\UVA_10278_Fire_Station.txt" />
     <Text Include="..\input\UVA_10285_LONGEST_RUN_ON_SNOWBOARD.txt" />
+    <Text Include="..\input\UVA_10306_e_Coins.txt" />
     <Text Include="..\input\UVA_10341_Solve_It.txt" />
     <Text Include="..\input\UVA_10360_Rat_Attack.txt" />
     <Text Include="..\input\UVA_10364_Square.txt" />
@@ -329,6 +332,7 @@
     <Text Include="..\input\UVA_469_Wetlands_of_Florida.txt" />
     <Text Include="..\input\UVa_481_WhatGoesUp.txt" />
     <Text Include="..\input\UVA_562_Dividing_coins.txt" />
+    <Text Include="..\input\UVA_674_Coin_Change.txt" />
     <Text Include="..\input\UVA_820_Internet_Bandwidth.txt" />
     <Text Include="..\input\UVA_836_Largest_Submatrix.txt" />
     <Text Include="..\input\UVA_983_Localized_Summing_for_Blurring.txt" />
