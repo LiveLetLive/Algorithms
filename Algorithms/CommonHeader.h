@@ -71,8 +71,9 @@
 //#define UVA_983_LOCALIZED_SUMMING_FOR_BLURRING
 //#define UVA_10667_LARGEST_BLOCK
 //#define UVA_10827_MAXIMUM_SUM_ON_A_TORUS
-
-#define UVA_10074_TAKE_THE_LAND
+//#define UVA_10074_TAKE_THE_LAND
+//#define UVA_10306_E_COINS
+#define UVA_674_COIN_CHANGE
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
