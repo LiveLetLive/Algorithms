@@ -73,7 +73,12 @@
 //#define UVA_10827_MAXIMUM_SUM_ON_A_TORUS
 //#define UVA_10074_TAKE_THE_LAND
 //#define UVA_10306_E_COINS
-#define UVA_674_COIN_CHANGE
+//#define UVA_674_COIN_CHANGE
+//#define UVA_147_DOLLARS
+//#define UVA_11517_EXACT_CHANGE
+//#define UVA_11137_INGENUOUS_CUBRENCY
+//#define UVA_357_LET_ME_COUNT_THE_WAYS
+#define UVA_116_UNIDIRECTIONAL_TSP
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
