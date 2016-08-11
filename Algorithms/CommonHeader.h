@@ -78,7 +78,12 @@
 //#define UVA_11517_EXACT_CHANGE
 //#define UVA_11137_INGENUOUS_CUBRENCY
 //#define UVA_357_LET_ME_COUNT_THE_WAYS
-#define UVA_116_UNIDIRECTIONAL_TSP
+//#define UVA_116_UNIDIRECTIONAL_TSP
+//#define UVA_10337_FLIGHT_PLANNER
+//#define UVA_10036_DIVISIBILITY
+//#define UVA_11407_SQUARES
+//#define UVA_10912_SIMPLE_MINDED_HASHING
+#define UVA_1172_THE_BRIDGES_OF_KOLSBERG
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
