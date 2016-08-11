@@ -248,6 +248,21 @@
     <ClCompile Include="..\src\uva\UVA_116_Unidirectional_TSP.cpp">
       <Filter>UVA\DP</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10337_Flight_Planner.cpp">
+      <Filter>UVA\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10036_Divisibility.cpp">
+      <Filter>UVA\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11407_Squares.cpp">
+      <Filter>UVA\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10912_Simple_Minded_Hashing.cpp">
+      <Filter>UVA\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_1172_The_Bridges_of_Kolsberg.cpp">
+      <Filter>UVA\DP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
@@ -461,6 +476,21 @@
       <Filter>input</Filter>
     </Text>
     <Text Include="..\input\UVA_116_Unidirectional_TSP.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10337_Flight_Planner.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10036_Divisibility.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11407_Squares.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10912_Simple_Minded_Hashing.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_1172_The_Bridges_of_Kolsberg.txt">
       <Filter>input</Filter>
     </Text>
   </ItemGroup>
