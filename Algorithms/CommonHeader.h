@@ -83,7 +83,16 @@
 //#define UVA_10036_DIVISIBILITY
 //#define UVA_11407_SQUARES
 //#define UVA_10912_SIMPLE_MINDED_HASHING
-#define UVA_1172_THE_BRIDGES_OF_KOLSBERG
+//#define UVA_1172_THE_BRIDGES_OF_KOLSBERG
+//#define UVA_10721_BAR_CODES
+//#define UVA_10465_HOMER_SIMPSON
+//#define UVA_10400_GAME_SHOW_MATH
+//#define UVA_1211_ATOMIC_CAR_RACE  -- incomplete
+//#define UVA_10645_MENU  -- incomplete
+//#define UVA_10536_GAME_OF_EULER -- incomplete
+//#define UVA_10651_PEBBLE_SOLITAIRE
+//#define UVA_11218_KTV
+#define UVA_11088_END_UP_WITH_MORE_TEAMS
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
