@@ -20,7 +20,7 @@ READ_INPUT(UVA_11517_EXACT_CHANGE)
 #define MAXN 1000005
 #define MAXG 105
 #define MAXC 105
-#define INF 0x3FFFFFFF
+#define INF 0xFFFFFFF
 typedef long long ll;
 
 int dp[MAXN];
@@ -45,6 +45,11 @@ void solve()
 	dp[0] = 0;
 	dc[0] = 0;
 
+	//FOR(c1, 0, C)
+	//for (int i = 30001 - c[c1] - 1; i >= 0; i--)
+	//		dp[i + c[c1]] = min(dp[i + c[c1]], dp[i]+1);
+
+	// Since we have to use only 1 coin (duplicate same coin is not allowed to pick), run value loop upside down
 	FOR(c1, 0, C)
 		for (int i = 30001 - c[c1] - 1; i >= 0; i--)
 			if(dp[i] != INF)

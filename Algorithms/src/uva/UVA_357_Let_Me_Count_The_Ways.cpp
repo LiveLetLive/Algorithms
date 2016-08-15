@@ -30,8 +30,8 @@ int main()
 	ll dp[MAXN] = {};
 	dp[0] = 1;
 
-	FOR(i, 0, MAXC)
-		FOR(j, 0, MAXN)
+	FOR(i, 0, MAXC)		// All denominations
+		FOR(j, 0, MAXN)	// All values
 		if(j >= c[i])
 			dp[j] += dp[j - c[i]];
 
