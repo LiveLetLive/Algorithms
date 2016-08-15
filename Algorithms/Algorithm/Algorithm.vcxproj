@@ -39,7 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\;$(IncludePath);E:\Test_Preparation\Saurabh_Master\Algorithms</IncludePath>
+    <SourcePath>$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;E:\Test_Preparation\Saurabh_Master\Algorithms</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -49,6 +50,7 @@
       <CompileAs>CompileAsCpp</CompileAs>
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>E:\Test_Preparation\Saurabh_Master\Algorithms</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -93,7 +95,9 @@
     <ClCompile Include="..\src\uva\UVA_10010_Where_Waldorf.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10036_Divisibility.cpp" />
+    <ClCompile Include="..\src\uva\UVA_10036_Divisibility.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10048_Audiophobia.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -136,7 +140,13 @@
     <ClCompile Include="..\src\uva\UVA_10369_Arctic_Network.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10400_Game_Show_Math.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10459_The_Tree_Root.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10465_Homer_Simpson.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10480_Sabotage.cpp">
@@ -151,13 +161,25 @@
     <ClCompile Include="..\src\uva\UVA_10507_Waking_up_brain.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10536_Game_of_Euler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVa_1056_Degree_Of_Seperation.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10616_Divisible_Group_Sums.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10645_Menu.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10651_Pebble_Solitaire.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10667_Largest_Block.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10721_Bar_Codes.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10801_Lift_Hopping.cpp">
@@ -178,11 +200,17 @@
     <ClCompile Include="..\src\uva\UVA_10911_Forming_Quiz_Teams.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10912_Simple_Minded_Hashing.cpp" />
+    <ClCompile Include="..\src\uva\UVA_10912_Simple_Minded_Hashing.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVa_1099_Sharing_Chocolate.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11088_End_up_with_More_Teams.cpp" />
     <ClCompile Include="..\src\uva\UVA_11137_Ingenuous_Cubrency.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11218_KTV.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_11284_Shopping_Trip.cpp">
@@ -197,7 +225,9 @@
     <ClCompile Include="..\src\uva\UVa_11391_Blobs_in_the_Board.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_11407_Squares.cpp" />
+    <ClCompile Include="..\src\uva\UVA_11407_Squares.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_11450_Wedding_Shopping.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -219,8 +249,13 @@
     <ClCompile Include="..\src\uva\UVA_116_Unidirectional_TSP.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_1172_The_Bridges_of_Kolsberg.cpp" />
+    <ClCompile Include="..\src\uva\UVA_1172_The_Bridges_of_Kolsberg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_11790_Murcia_Skyline.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11832_Account_Book.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_11906_Knight_in_War_Grid.cpp">
@@ -238,11 +273,17 @@
     <ClCompile Include="..\src\uva\UVA_12047_Highest_Paid_Toll.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_1211_Atomic_Car_Race.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_12125_March_of_the_Penguins.cpp">
       <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</BufferSecurityCheck>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_1213_Sum_of_Different_Primes.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_12324_Philip_J_Fry_Problem.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_12379_Central_Post_Office.cpp">
@@ -320,14 +361,20 @@
     <Text Include="..\input\UVA_10364_Square.txt" />
     <Text Include="..\input\UVA_10369_Arctic_Network.txt" />
     <Text Include="..\input\UVA_103_STACKING_BOXES.txt" />
+    <Text Include="..\input\UVA_10400_Game_Show_Math.txt" />
     <Text Include="..\input\UVA_10459_The_Tree_Root.txt" />
+    <Text Include="..\input\UVA_10465_Homer_Simpson.txt" />
     <Text Include="..\input\UVA_10480_Sabotage.txt" />
     <Text Include="..\input\UVA_10496_Collecting_Beepers.txt" />
     <Text Include="..\input\UVA_104_Arbitrage.txt" />
     <Text Include="..\input\UVA_10507_WAKING_UP_BRAIN.txt" />
+    <Text Include="..\input\UVA_10536_Game_of_Euler.txt" />
     <Text Include="..\input\UVa_1056_Degree_Of_Seperation.txt" />
     <Text Include="..\input\UVA_10616_Divisible_Group_Sums.txt" />
+    <Text Include="..\input\UVA_10645_Menu.txt" />
+    <Text Include="..\input\UVA_10651_Pebble_Solitaire.txt" />
     <Text Include="..\input\UVA_10667_Largest_Block.txt" />
+    <Text Include="..\input\UVA_10721_Bar_Codes.txt" />
     <Text Include="..\input\UVA_10801_Lift_Hopping.txt" />
     <Text Include="..\input\UVA_10819_Trouble_of_13_Dots.txt" />
     <Text Include="..\input\UVA_10827_Maximum_sum_on_a_torus.txt" />
@@ -336,7 +383,9 @@
     <Text Include="..\input\UVA_10911_Forming_Quiz_Teams.txt" />
     <Text Include="..\input\UVA_10912_Simple_Minded_Hashing.txt" />
     <Text Include="..\input\UVa_1099_Sharing_Chocolate.txt" />
+    <Text Include="..\input\UVA_11088_End_up_with_More_Teams.txt" />
     <Text Include="..\input\UVA_11137_Ingenuous_Cubrency.txt" />
+    <Text Include="..\input\UVA_11218_KTV.txt" />
     <Text Include="..\input\UVA_11284_Shopping_Trip.txt" />
     <Text Include="..\input\UVA_11367_FULLTANK.txt" />
     <Text Include="..\input\UVa_11380_Down_Went_The_Titanic.txt" />
@@ -351,13 +400,16 @@
     <Text Include="..\input\UVA_116_Unidirectional_TSP.txt" />
     <Text Include="..\input\UVA_1172_The_Bridges_of_Kolsberg.txt" />
     <Text Include="..\input\UVA_11790_Murcia_Skyline.txt" />
+    <Text Include="..\input\UVA_11832_Account_Book.txt" />
     <Text Include="..\input\UVA_11906_Knight_in_War_Grid.txt" />
     <Text Include="..\input\UVA_11951_AREA.txt" />
     <Text Include="..\input\UVA_11957_Checkers.txt" />
     <Text Include="..\input\UVA_1203_ARGUS.txt" />
     <Text Include="..\input\UVA_12047_Highest_Paid_Toll.txt" />
+    <Text Include="..\input\UVA_1211_Atomic_Car_Race.txt" />
     <Text Include="..\input\UVA_12125_March_of_the_Penguins.txt" />
     <Text Include="..\input\UVA_1213_Sum_of_Different_Primes.txt" />
+    <Text Include="..\input\UVA_12324_Philip_J_Fry_Problem.txt" />
     <Text Include="..\input\UVA_12379_Central_Post_Office.txt" />
     <Text Include="..\input\UVa_12467_Secret_word.txt" />
     <Text Include="..\input\UVA_147_Dollars.txt" />
