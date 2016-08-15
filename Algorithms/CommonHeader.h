@@ -8,7 +8,7 @@
 /**************************************ad-hoc Algorithm*************************************************/
 //UVA
 
-//#define UVA_103_STACKING_BOXES
+#define UVA_103_STACKING_BOXES
 //#define UVA_10285_LONGEST_RUN_ON_SNOWBOARD
 //#define UVA_11450_WEDDING_SHOPPING
 //#define UVA_1056_DEGREE_OF_SEPERATION
@@ -92,7 +92,7 @@
 //#define UVA_10536_GAME_OF_EULER -- incomplete
 //#define UVA_10651_PEBBLE_SOLITAIRE
 //#define UVA_11218_KTV
-#define UVA_11088_END_UP_WITH_MORE_TEAMS
+//#define UVA_11088_END_UP_WITH_MORE_TEAMS
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
