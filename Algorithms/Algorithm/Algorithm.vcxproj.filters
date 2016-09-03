@@ -200,9 +200,6 @@
     <ClCompile Include="..\src\uva\UVA_4106_ACORN.cpp">
       <Filter>UVA\DP\Others</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_436_ArbitrageII.cpp">
-      <Filter>UVA\DP\Others</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\uva\UVa_481_WhatGoesUp.cpp">
       <Filter>UVA\DP\Others</Filter>
     </ClCompile>
@@ -224,86 +221,101 @@
     <ClCompile Include="..\src\uva\UVA_990_Diving_for_Gold.cpp">
       <Filter>UVA\DP\Others</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\uva\UVa 103_Stacking_Boxes.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10003_Cutting_Sticks.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10036_Divisibility.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10074_Take_the_Land.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10130_SuperSale.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10261_Ferry_Loading.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10306_e_Coins.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10337_Flight_Planner.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10364_Square.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10400_Game_Show_Math.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10465_Homer_Simpson.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10496_Collecting_Beepers.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10536_Game_of_Euler.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10616_Divisible_Group_Sums.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10645_Menu.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10651_Pebble_Solitaire.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10667_Largest_Block.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10721_Bar_Codes.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10819_Trouble_of_13_Dots.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10827_Maximum_sum_on_a_torus.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVa_10898_Combo_Deal.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_108_Maximum_sum.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10911_Forming_Quiz_Teams.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVA_10912_Simple_Minded_Hashing.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\uva\UVa_1099_Sharing_Chocolate.cpp">
-      <Filter>UVA\DP\11</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_11137_Ingenuous_Cubrency.cpp">
       <Filter>UVA\DP\11</Filter>
     </ClCompile>
     <ClCompile Include="..\src\uva\UVA_11088_End_up_with_More_Teams.cpp">
       <Filter>UVA\DP\11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_436_ArbitrageII.cpp">
+      <Filter>UVA\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa 103_Stacking_Boxes.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10003_Cutting_Sticks.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10036_Divisibility.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10074_Take_the_Land.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10130_SuperSale.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10261_Ferry_Loading.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10306_e_Coins.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10337_Flight_Planner.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10364_Square.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10400_Game_Show_Math.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10465_Homer_Simpson.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10496_Collecting_Beepers.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10536_Game_of_Euler.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10616_Divisible_Group_Sums.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10645_Menu.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10651_Pebble_Solitaire.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10667_Largest_Block.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10721_Bar_Codes.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10819_Trouble_of_13_Dots.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10827_Maximum_sum_on_a_torus.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_10898_Combo_Deal.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_108_Maximum_sum.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10911_Forming_Quiz_Teams.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10912_Simple_Minded_Hashing.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_1099_Sharing_Chocolate.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\Self_Kam_Se_Kam_CPU.cpp">
+      <Filter>UVA\DP\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10980_Lowest_Price_in_Town.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11420_Chest_of_Drawers.cpp">
+      <Filter>UVA\DP\11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_607_Scheduling_Lectures.cpp">
+      <Filter>UVA\DP\Others</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -566,6 +578,18 @@
       <Filter>input</Filter>
     </Text>
     <Text Include="..\input\UVA_10536_Game_of_Euler.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\Self_Kam_Se_Kam_CPU.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10980_Lowest_Price_in_Town.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11420_Chest_of_Drawers.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_607_Scheduling_Lectures.txt">
       <Filter>input</Filter>
     </Text>
   </ItemGroup>
