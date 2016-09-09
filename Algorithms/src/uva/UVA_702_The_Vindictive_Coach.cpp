@@ -16,19 +16,20 @@ READ_INPUT(UVA_702_THE_VINDICTIVE_COACH)
 	using namespace std;
 
 #define FOR(i, init, cnt) for(int i = init; i < cnt; i++)
-#define MAXN 23
+#define MAXN 22
 #define INF 0x3f3f3f3f3f3f3f3fL
 typedef long long ll;
 int N, C;
 
-ll dp[MAXN][1<<MAXN];
+ll dp[2][MAXN][1<<MAXN];
 
 
 void reset()
 {
+	FOR(h, 0, 2)
 	FOR(i, 0, N+1)
 		FOR(j, 0, 1<<(N+1))
-		dp[i][j] = -1;
+		dp[h][i][j] = -1;
 
 }
 
@@ -37,8 +38,8 @@ ll solve(int idx, int bitmask, int sh)
 	if(bitmask == ((1 << N) - 1))
 		return 1;
 
-	if(dp[idx][bitmask] != -1)
-		return dp[idx][bitmask];
+	if(dp[sh][idx][bitmask] != -1)
+		return dp[sh][idx][bitmask];
 
 	ll ans = 0;
 
@@ -74,13 +75,11 @@ ll solve(int idx, int bitmask, int sh)
 		}
 	}
 
-	return dp[idx][bitmask] = ans;
+	return dp[sh][idx][bitmask] = ans;
 }
 
 int main()
 {
-	int T;
-
 	while(scanf("%d %d ", &N, &C) != EOF)
 	{
 		C--;
