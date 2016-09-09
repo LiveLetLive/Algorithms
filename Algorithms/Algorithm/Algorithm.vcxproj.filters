@@ -323,6 +323,12 @@
     <ClCompile Include="..\src\uva\UVA_702_The_Vindictive_Coach.cpp">
       <Filter>UVA\DP\Others</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_812_Trade_on_Verweggistan.cpp">
+      <Filter>UVA\DP\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10271_Chopsticks.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
@@ -602,6 +608,12 @@
       <Filter>input</Filter>
     </Text>
     <Text Include="..\input\UVA_702_The_Vindictive_Coach.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_812_Trade_on_Verweggistan.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10271_Chopsticks.txt">
       <Filter>input</Filter>
     </Text>
   </ItemGroup>
