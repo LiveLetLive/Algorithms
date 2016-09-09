@@ -100,7 +100,9 @@
 //#define UVA_11420_CHEST_OF_DRAWERS
 //#define UVA_607_SCHEDULING_LECTURES
 //#define UVA_4143_FREE_PARENTHESES
-#define UVA_702_THE_VINDICTIVE_COACH
+//#define UVA_702_THE_VINDICTIVE_COACH
+#define UVA_812_TRADE_ON_VERWEGGISTAN
+//#define UVA_10271_CHOPSTICKS
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
