@@ -1,4 +1,4 @@
-#include "CommonHeader.h"
+﻿#include "CommonHeader.h"
 
 #ifdef UVA_812_TRADE_ON_VERWEGGISTAN
 READ_INPUT(UVA_812_TRADE_ON_VERWEGGISTAN)
@@ -27,8 +27,11 @@ int Bcnt[MAXW];
 int profit[MAXW][MAXB];
 int maxprofit[MAXW];
 int cntIdx[MAXW];
+int minLen[MAXW*MAXB];
 int maxprofitIndex[MAXW][MAXB];
 int maxprofitAns = 0;
+
+
 void reset()
 {
 	FOR(i, 0, W)
@@ -36,15 +39,40 @@ void reset()
 		maxprofit[i] = 0;
 		cntIdx[i] = 0;
 		FOR(j, 0, Bcnt[i])
-			maxprofitIndex[i][j] = -INF;
+			maxprofitIndex[i][j] = 0;
 	}
+
 	maxprofitAns = 0;
 
+	FOR(i, 0, MAXW*MAXB)
+		minLen[i] = 0;
+}
+
+void FindMinLen(int idx, int sum)
+{
+	if(idx == W) 
+		minLen[sum] = 1;
+	else 
+	{ 
+		while(idx < W && cntIdx[idx] == 0)
+			idx++;
+
+		if(idx >= W) 
+		{
+			minLen[sum] = 1;
+			return;
+		}
+
+		FOR(i, 0, cntIdx[idx]) 
+		{
+			FindMinLen(idx+1, sum + maxprofitIndex[idx][i]);
+		}
+	}
 }
 
 int main()
 {
-	int t = 0;
+	int t = 1;
 	while(scanf("%d ", &W), W)
 	{
 		FOR(i, 0, W)
@@ -64,20 +92,32 @@ int main()
 			if(maxprofit[i] < profit[i][j])
 				maxprofit[i] = profit[i][j];
 		}
-		
+
 		FOR(i, 0, W)
 			FOR(j, 0, Bcnt[i])
 			if(maxprofit[i] == profit[i][j])
 				maxprofitIndex[i][cntIdx[i]++] = j+1;
-		
+
 		FOR(i, 0, W)
 			maxprofitAns += maxprofit[i];
 
-		printf("Workyards %d\n", t+1);
+		FindMinLen(0, 0);
+
+		printf("Workyards %d\n", t++);
 		printf("Maximum profit is %d.\n", maxprofitAns);
-		printf("Number of pruls to buy: \n");
+		printf("Number of pruls to buy: ");
+
+		int count = 0;
+		FOR(i, 0, MAXW*MAXB)
+		{
+			if(minLen[i] == 1)
+				printf("%d ", i), count++;
+			if(count == 10)
+				break;
+		}
+
+		printf("\n\n");
 	}
 	return 0;
 }
-
 #endif
