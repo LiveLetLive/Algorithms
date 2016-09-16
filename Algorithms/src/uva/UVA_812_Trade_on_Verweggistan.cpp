@@ -34,12 +34,12 @@ int maxprofitAns = 0;
 
 void reset()
 {
-	FOR(i, 0, W)
+	FOR(i, 0, MAXW)
 	{
 		maxprofit[i] = 0;
 		cntIdx[i] = 0;
-		FOR(j, 0, Bcnt[i])
-			maxprofitIndex[i][j] = 0;
+		FOR(j, 0, MAXB)
+			maxprofitIndex[i][j] = 0, profit[i][j] = 0;
 	}
 
 	maxprofitAns = 0;
@@ -63,7 +63,10 @@ void FindMinLen(int idx, int sum)
 			return;
 		}
 
-		FOR(i, 0, cntIdx[idx]) 
+		int count = cntIdx[idx];
+		if(count > 10) count = 10;
+
+		FOR(i, 0, count) 
 		{
 			FindMinLen(idx+1, sum + maxprofitIndex[idx][i]);
 		}
@@ -75,14 +78,16 @@ int main()
 	int t = 1;
 	while(scanf("%d ", &W), W)
 	{
+		reset();
+
+		if(t>1) printf("\n");
+
 		FOR(i, 0, W)
 		{
 			scanf("%d ", &Bcnt[i]);
 			FOR(j, 0, Bcnt[i])
 				scanf("%d ", &profit[i][j]), profit[i][j] = 10 - profit[i][j];
 		}
-
-		reset();
 
 		FOR(i, 0, W)
 			FOR(j, 0, Bcnt[i])
@@ -94,9 +99,14 @@ int main()
 		}
 
 		FOR(i, 0, W)
-			FOR(j, 0, Bcnt[i])
-			if(maxprofit[i] == profit[i][j])
-				maxprofitIndex[i][cntIdx[i]++] = j+1;
+		{
+			if(maxprofit[i] == 0)
+				maxprofitIndex[i][cntIdx[i]++] = 0;
+			
+			FOR(j, 0, Bcnt[i]) 
+				if( (maxprofit[i] == profit[i][j]))
+					maxprofitIndex[i][cntIdx[i]++] = j+1;
+		}
 
 		FOR(i, 0, W)
 			maxprofitAns += maxprofit[i];
@@ -105,18 +115,18 @@ int main()
 
 		printf("Workyards %d\n", t++);
 		printf("Maximum profit is %d.\n", maxprofitAns);
-		printf("Number of pruls to buy: ");
+		printf("Number of pruls to buy:");
 
 		int count = 0;
 		FOR(i, 0, MAXW*MAXB)
 		{
 			if(minLen[i] == 1)
-				printf("%d ", i), count++;
+				printf(" %d", i), count++;
 			if(count == 10)
 				break;
 		}
 
-		printf("\n\n");
+		printf("\n");
 	}
 	return 0;
 }

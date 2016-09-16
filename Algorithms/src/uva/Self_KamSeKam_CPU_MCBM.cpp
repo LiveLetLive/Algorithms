@@ -37,20 +37,31 @@ void reset()
 		g[i][j] = 0, cnt[i] = 0;
 }
 
-int Aug(int u)
+void PrepareGraph()
 {
-	if(vis[u])
+		FOR(i, 0, N)
+			FOR(j, 0, N)
+		{
+			if(i == j) continue;
+			if((tm[i] + len[i] - tm[j] + len[j] ) <= 10)
+				g[i][cnt[i]++] = j+N;
+		}
+}
+
+int Aug(int l) 
+{
+	if (vis[l]) 
 		return 0;
 
-	vis[u] = 1;
+	vis[l] = 1;
 
-	FOR(x, 0, cnt[u])
+	FOR(j, 0, cnt[l])
 	{
-		int v = g[u][x];
+		int r = g[l][j];
 
-		if(match[v] == -1 || Aug(match[v]))
+		if (match[r] == -1 || Aug(match[r])) 
 		{
-			match[v] = u;
+			match[r] = l; 
 			return 1;
 		}
 	}
@@ -91,14 +102,9 @@ int main()
 		FOR(i, 0, N)
 			scanf("%d %d ", &tm[i], &len[i]);
 
-		FOR(i, 0, N)
-			FOR(j, 0, N)
-		{
-			if(i == j) continue;
-			if((tm[i] + len[i] - tm[j] + len[j] ) <= 10)
-				g[i][cnt[i]++] = j+N;
-		}
 
+
+		PrepareGraph();
 		int cpus =  N - FindMCBM();
 		cpus = cpus > 5 ? -1 : cpus; 
 
