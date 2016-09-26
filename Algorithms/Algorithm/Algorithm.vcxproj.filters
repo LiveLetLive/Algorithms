@@ -34,6 +34,18 @@
     <Filter Include="UVA\DP\Others">
       <UniqueIdentifier>{d350d534-d655-40f3-9ca0-2549554e03e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="input\10">
+      <UniqueIdentifier>{fb6f3085-097e-4e34-b6d5-8a5ac0cfa6d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input\11">
+      <UniqueIdentifier>{20580d96-ab97-4d81-b260-16305b90cf29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input\12">
+      <UniqueIdentifier>{525757ba-c715-47d4-ae89-dc166627d96f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input\Misc">
+      <UniqueIdentifier>{c617312a-5a58-4fd8-bf0f-723600f608ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CommonHeader.h" />
@@ -305,9 +317,6 @@
     <ClCompile Include="..\src\uva\UVa_1099_Sharing_Chocolate.cpp">
       <Filter>UVA\DP\10</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\uva\Self_Kam_Se_Kam_CPU.cpp">
-      <Filter>UVA\DP\Others</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\uva\UVA_10980_Lowest_Price_in_Town.cpp">
       <Filter>UVA\DP\10</Filter>
     </ClCompile>
@@ -329,292 +338,349 @@
     <ClCompile Include="..\src\uva\UVA_10271_Chopsticks.cpp">
       <Filter>UVA\DP\10</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11368_Nested_Dolls.cpp">
+      <Filter>UVA\DP\11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_1201_Taxi_Cab_Scheme.cpp">
+      <Filter>UVA\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_1184_Air_Raid.cpp">
+      <Filter>UVA\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\Self_Kam_Se_Kam_CPU.cpp">
+      <Filter>UVA\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\Self_KamSeKam_CPU_MCBM.cpp">
+      <Filter>UVA\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVa_12083_Guardian_of_Decency.cpp">
+      <Filter>UVA\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_10349_Antenna_Placement.cpp">
+      <Filter>UVA\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_11138_Nuts_and_Bolts.cpp">
+      <Filter>UVA\Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\Uva_10154_Weights_and_Measures.cpp">
+      <Filter>UVA\DP\10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uva\UVA_750_8_Queens_Chess_Problem.cpp">
+      <Filter>UVA\D&amp;C_Exhaustive</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11456_Trainsorting.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_1056_Degree_Of_Seperation.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_1203_ARGUS.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11367_FULLTANK.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_469_Wetlands_of_Florida.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11790_Murcia_Skyline.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_481_WhatGoesUp.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11951_AREA.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_108_MAXIMUM_SUM.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_103_STACKING_BOXES.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11450_WEDDING_SHOPPING.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10285_LONGEST_RUN_ON_SNOWBOARD.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_100_3NPLUS1.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11906_Knight_in_War_Grid.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_436_ArbitrageII.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_104_Arbitrage.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_452_Project_Scheduling.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\SPOJ_FISHMONGER.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_259_SOFTWARE_ALLOCATION.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_820_Internet_Bandwidth.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10480_Sabotage.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_11380_Down_Went_The_Titanic.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10459_The_Tree_Root.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_12379_Central_Post_Office.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11506_Angry_Programmer.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10801_Lift_Hopping.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_988_Many_paths_one_destination.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11957_Checkers.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_12047_Highest_Paid_Toll.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10369_Arctic_Network.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_12125_March_of_the_Penguins.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10278_Fire_Station.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10048_Audiophobia.txt">
-      <Filter>input</Filter>
+    <Text Include="..\input\UVA_10003_CUTTING_STICKS.txt">
+      <Filter>input\10</Filter>
     </Text>
     <Text Include="..\input\UVA_10010_Where_Waldorf.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_11475_Extend_to_Palindromes.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_12467_Secret_word.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_4106_ACORN.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10507_WAKING_UP_BRAIN.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_11503_Virtual_Friends.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10341_Solve_It.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10130_SuperSale.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10819_Trouble_of_13_Dots.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10261_Ferry_Loading.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_1213_Sum_of_Different_Primes.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10360_Rat_Attack.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10911_Forming_Quiz_Teams.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10364_Square.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_11391_Blobs_in_the_Board.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_1099_Sharing_Chocolate.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10003_CUTTING_STICKS.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10496_Collecting_Beepers.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_216_Getting_in_Line.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_10898_Combo_Deal.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11284_Shopping_Trip.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_562_Dividing_coins.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_990_Diving_for_Gold.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10616_Divisible_Group_Sums.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\src\uva\Self_Chip_Selection.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_836_Largest_Submatrix.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_983_Localized_Summing_for_Blurring.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10667_Largest_Block.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10827_Maximum_sum_on_a_torus.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10074_Take_the_Land.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10306_e_Coins.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_674_Coin_Change.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_147_Dollars.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVa_11517_Exact_Change.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11137_Ingenuous_Cubrency.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_357_Let_Me_Count_The_Ways.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_116_Unidirectional_TSP.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10337_Flight_Planner.txt">
-      <Filter>input</Filter>
+      <Filter>input\10</Filter>
     </Text>
     <Text Include="..\input\UVA_10036_Divisibility.txt">
-      <Filter>input</Filter>
+      <Filter>input\10</Filter>
     </Text>
-    <Text Include="..\input\UVA_11407_Squares.txt">
-      <Filter>input</Filter>
+    <Text Include="..\input\UVA_10048_Audiophobia.txt">
+      <Filter>input\10</Filter>
     </Text>
-    <Text Include="..\input\UVA_10912_Simple_Minded_Hashing.txt">
-      <Filter>input</Filter>
+    <Text Include="..\input\UVA_10074_Take_the_Land.txt">
+      <Filter>input\10</Filter>
     </Text>
-    <Text Include="..\input\UVA_1172_The_Bridges_of_Kolsberg.txt">
-      <Filter>input</Filter>
+    <Text Include="..\input\UVA_100_3NPLUS1.txt">
+      <Filter>input\10</Filter>
     </Text>
-    <Text Include="..\input\UVA_10721_Bar_Codes.txt">
-      <Filter>input</Filter>
+    <Text Include="..\input\UVA_10130_SuperSale.txt">
+      <Filter>input\10</Filter>
     </Text>
-    <Text Include="..\input\UVA_10465_Homer_Simpson.txt">
-      <Filter>input</Filter>
+    <Text Include="..\input\UVA_10213_How_Many_Pieces_of_Land.txt">
+      <Filter>input\10</Filter>
     </Text>
-    <Text Include="..\input\UVA_10400_Game_Show_Math.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_1211_Atomic_Car_Race.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10645_Menu.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_12324_Philip_J_Fry_Problem.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11218_KTV.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11832_Account_Book.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11088_End_up_with_More_Teams.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10651_Pebble_Solitaire.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10536_Game_of_Euler.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\Self_Kam_Se_Kam_CPU.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_10980_Lowest_Price_in_Town.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_11420_Chest_of_Drawers.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_607_Scheduling_Lectures.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_4143_Free_Parentheses.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_702_The_Vindictive_Coach.txt">
-      <Filter>input</Filter>
-    </Text>
-    <Text Include="..\input\UVA_812_Trade_on_Verweggistan.txt">
-      <Filter>input</Filter>
+    <Text Include="..\input\UVA_10261_Ferry_Loading.txt">
+      <Filter>input\10</Filter>
     </Text>
     <Text Include="..\input\UVA_10271_Chopsticks.txt">
-      <Filter>input</Filter>
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10278_Fire_Station.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10285_LONGEST_RUN_ON_SNOWBOARD.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10306_e_Coins.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10337_Flight_Planner.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10341_Solve_It.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10349_Antenna_Placement.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10360_Rat_Attack.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10364_Square.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10369_Arctic_Network.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_103_STACKING_BOXES.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10400_Game_Show_Math.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10459_The_Tree_Root.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10465_Homer_Simpson.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10480_Sabotage.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10496_Collecting_Beepers.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_104_Arbitrage.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10507_WAKING_UP_BRAIN.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10536_Game_of_Euler.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVa_1056_Degree_Of_Seperation.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10616_Divisible_Group_Sums.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10645_Menu.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10651_Pebble_Solitaire.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10667_Largest_Block.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10721_Bar_Codes.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10801_Lift_Hopping.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10819_Trouble_of_13_Dots.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10827_Maximum_sum_on_a_torus.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVa_10898_Combo_Deal.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_108_MAXIMUM_SUM.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10911_Forming_Quiz_Teams.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10912_Simple_Minded_Hashing.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_10980_Lowest_Price_in_Town.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVa_1099_Sharing_Chocolate.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11088_End_up_with_More_Teams.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11137_Ingenuous_Cubrency.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11218_KTV.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11284_Shopping_Trip.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11367_FULLTANK.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11368_Nested_Dolls.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVa_11380_Down_Went_The_Titanic.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVa_11391_Blobs_in_the_Board.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11407_Squares.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11420_Chest_of_Drawers.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11450_WEDDING_SHOPPING.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11456_Trainsorting.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVa_11475_Extend_to_Palindromes.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVa_11503_Virtual_Friends.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11506_Angry_Programmer.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVa_11517_Exact_Change.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_116_Unidirectional_TSP.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_1172_The_Bridges_of_Kolsberg.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11790_Murcia_Skyline.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11832_Account_Book.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_1184_Air_Raid.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11906_Knight_in_War_Grid.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11951_AREA.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11957_Checkers.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\UVA_1201_Taxi_Cab_Scheme.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\input\UVA_1203_ARGUS.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\input\UVA_12047_Highest_Paid_Toll.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\input\UVa_12083_Guardian_of_Decency.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\input\UVA_1211_Atomic_Car_Race.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\input\UVA_12125_March_of_the_Penguins.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\input\UVA_1213_Sum_of_Different_Primes.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\input\UVA_12324_Philip_J_Fry_Problem.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\input\UVA_12379_Central_Post_Office.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\input\UVa_12467_Secret_word.txt">
+      <Filter>input\12</Filter>
+    </Text>
+    <Text Include="..\src\uva\Self_Chip_Selection.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\Self_Kam_Se_Kam_CPU.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\Self_KamSeKam_CPU_MCBM.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\SPOJ_FISHMONGER.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_147_Dollars.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_216_Getting_in_Line.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_259_SOFTWARE_ALLOCATION.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_357_Let_Me_Count_The_Ways.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_4106_ACORN.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_4143_Free_Parentheses.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_436_ArbitrageII.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_452_Project_Scheduling.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_469_Wetlands_of_Florida.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVa_481_WhatGoesUp.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_562_Dividing_coins.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_607_Scheduling_Lectures.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_674_Coin_Change.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_702_The_Vindictive_Coach.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_812_Trade_on_Verweggistan.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_820_Internet_Bandwidth.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_836_Largest_Submatrix.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_983_Localized_Summing_for_Blurring.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_988_Many_paths_one_destination.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_990_Diving_for_Gold.txt">
+      <Filter>input\Misc</Filter>
+    </Text>
+    <Text Include="..\input\UVA_11138_Nuts_and_Bolts.txt">
+      <Filter>input\11</Filter>
+    </Text>
+    <Text Include="..\input\Uva_10154_Weights_and_Measures.txt">
+      <Filter>input\10</Filter>
+    </Text>
+    <Text Include="..\input\UVA_750_8_Queens_Chess_Problem.txt">
+      <Filter>input\Misc</Filter>
     </Text>
   </ItemGroup>
 </Project>
