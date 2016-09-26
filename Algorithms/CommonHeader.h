@@ -96,13 +96,22 @@
 //#define UVA_11832_ACCOUNT_BOOK
 //#define UVA_12324_PHILIP_J_FRY_PROBLEM
 //#define SELF_KAM_SE_KAM_CPU
+//#define SELF_KAMSEKAM_CPU_MCBM
 //#define UVA_10980_LOWEST_PRICE_IN_TOWN
 //#define UVA_11420_CHEST_OF_DRAWERS
 //#define UVA_607_SCHEDULING_LECTURES
 //#define UVA_4143_FREE_PARENTHESES
 //#define UVA_702_THE_VINDICTIVE_COACH
-#define UVA_812_TRADE_ON_VERWEGGISTAN
+//#define UVA_812_TRADE_ON_VERWEGGISTAN
 //#define UVA_10271_CHOPSTICKS
+//#define UVA_11368_NESTED_DOLLS
+//#define UVA_1201_TAXI_CAB_SCHEME
+//#define UVA_1184_AIR_RAID
+//#define UVA_12083_GUARDIAN_OF_DECENCY
+//#define UVA_10349_ANTENNA_PLACEMENT
+//#define UVA_11138_NUTS_AND_BOLTS
+//#define UVA_10154_WEIGHTS_AND_MEASURES
+#define UVA_750_8_QUEENS_CHESS_PROBLEM
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
