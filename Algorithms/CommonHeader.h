@@ -111,15 +111,44 @@
 //#define UVA_10349_ANTENNA_PLACEMENT
 //#define UVA_11138_NUTS_AND_BOLTS
 //#define UVA_10154_WEIGHTS_AND_MEASURES
-#define UVA_750_8_QUEENS_CHESS_PROBLEM
+//#define UVA_750_8_QUEENS_CHESS_PROBLEM
+//#define UVA_725_DIVISION
+//#define UVA_11742_SOCIAL_CONSTRAINTS
+#define SELF_TWO_MONSTER_IN_MAZE
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
 #include <direct.h>
+#include <conio.h>
+#include <time.h>
+#include <chrono>  
 
 #define CAT(A, B)   A##B
 #define FILE_NAME1(A, B) CAT(A, B)
 #define FILE_NAME(A, B) FILE_NAME1(A, B)
+
+
+class MyProfiling
+{
+public:
+	clock_t t;
+	std::chrono::high_resolution_clock::time_point t1;
+	std::chrono::high_resolution_clock::time_point t2;
+
+	MyProfiling() {
+		t1 = std::chrono::high_resolution_clock::now();
+		t = clock();
+	}
+
+	~MyProfiling() {
+		t2 = std::chrono::high_resolution_clock::now();
+		t = clock() - t;
+		std::chrono::duration<double> time_span = std::chrono::duration_cast<std::chrono::duration<double>>(t2 - t1);
+		std::cout << "All TCs took " << time_span.count() << " seconds\n";
+		//printf ("All TCs took %.2f seconds\n", ((float)t)/CLOCKS_PER_SEC);
+		_getch();
+	}
+};
 
 #define READ_INPUT(A)													\
 	int before_main1()													\
@@ -131,6 +160,7 @@
 	return 0;															\
 }																		\
 	int nn = before_main1();											\
+	MyProfiling mp;														\
 	/*******************************************************************************************************/
 
 
