@@ -248,10 +248,10 @@ int main()
 
 		int NB = N*N;
 
-		/*FOR(k, 0, NB)
+		FOR(k, 0, NB)
 			FOR(i, 0, NB)
 			FOR(j, 0, NB)
-			fw_dist[i][j] = min(fw_dist[i][j], fw_dist[i][k] + fw_dist[k][j]);*/
+			fw_dist[i][j] = min(fw_dist[i][j], fw_dist[i][k] + fw_dist[k][j]);
 #if 0
 		FOR(i, 0, N)
 		{
