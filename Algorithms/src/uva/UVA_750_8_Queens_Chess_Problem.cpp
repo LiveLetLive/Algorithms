@@ -72,6 +72,8 @@ int place(int c, int cnt)
 	{
 		if(isPossible(r, c))
 		{
+			if(c == sc && r != sr) 
+				continue;
 			placedR[c] = r;
 			place(c+1, cnt + 1);
 			placedR[c] = -1;
