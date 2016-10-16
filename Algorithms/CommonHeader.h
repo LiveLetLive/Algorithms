@@ -114,7 +114,12 @@
 //#define UVA_750_8_QUEENS_CHESS_PROBLEM
 //#define UVA_725_DIVISION
 //#define UVA_11742_SOCIAL_CONSTRAINTS
-#define SELF_TWO_MONSTER_IN_MAZE
+//#define SELF_TWO_MONSTER_IN_MAZE
+//#define UVA_652_EIGHT
+//#define UVA_15_PUZZLE_PROBLEM
+//#define UVA_314_ROBOT
+//#define UVA_12160_UNLOCK_THE_LOCK
+#define UVA_1202_FINDING_NEMO
 /*******************************************************************************************************/
 #include <iostream>
 #include <string>
