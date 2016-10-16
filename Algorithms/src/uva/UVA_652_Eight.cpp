@@ -18,6 +18,7 @@ READ_INPUT(UVA_652_EIGHT)
 #define FOR(i, init, cnt) for(int i = init; i < cnt; i++)
 #define ROW 3
 #define MAXN ROW*ROW
+#define BLANK_POS ((ROW*ROW)-1)
 #define INF 0x3f3f3f3fL
 typedef unsigned long long ull;
 int a[MAXN];
@@ -38,9 +39,9 @@ int H()
 {
 	int sum = 0;
 	FOR(i, 0, MAXN)
-		if(a[i] != 0 && i != a[i])
-			sum += abs(a[i] - i);
-	return sum;
+		if(a[i] != BLANK_POS)
+			sum += (abs(a[i]/ROW - i/ROW) + abs(a[i]%ROW - i%ROW));
+		return sum;
 }
 
 int dr[] = { -1, 0, 0, 1 };
@@ -75,23 +76,27 @@ int DFS(int g, int h)
 
 	unsigned long long state = 0;
 	FOR(i, 0, MAXN)
-		state |= (a[i] << 4);
+		state <<= 4, state += a[i];
 
 	if(visit_map.count(state) && visit_map[state] <= g)
 		return false;
 
-	int i;
-	for(i = 0; i < MAXN; i++)
-		if(a[i] == 15)
-			break;
+	visit_map[state] = g;
 
-	int pi = i/4;
-	int pj = i%4;
+	int j;
+	for(j = 0; j < MAXN; j++)
+	{
+		if(a[j] == BLANK_POS)
+			break;
+	}
+
+	int pi = j/ROW;
+	int pj = j%ROW;
 
 	FOR(x, 0, 4)
 	{
-		int ni = dr[x];
-		int nj = dc[x];
+		int ni = pi + dr[x];
+		int nj = pj + dc[x];
 
 		if(ni < 0 || nj < 0 || ni >= ROW || nj >= ROW )
 			continue;
@@ -124,11 +129,18 @@ int IDA_Star()
 
 		limit = next_limit;
 	}
+
+	return -1;
 }
 
-void PrintOutput()
-{
+char op_str[] = "ulrd";
 
+void PrintOutput(int pos)
+{
+	if (pos == 0)
+		return;
+	PrintOutput(pos - 1);
+	printf("%c", op_str[pred_map[pos]]); 
 }
 
 int main()
@@ -140,12 +152,12 @@ int main()
 		reset();
 
 		char arr[MAXN] = { 0 };
-
+		int blank = -1;
 		FOR(i, 0, MAXN)
 		{
 			scanf("%c ", &arr[i]);
 			if(arr[i] == 'x')
-				a[i] = 15;
+				a[i] = BLANK_POS, blank = i;
 			else
 				a[i] = arr[i] - '0' - 1;	// '0' based
 		}
@@ -154,16 +166,21 @@ int main()
 
 		FOR(i, 0, MAXN)
 			FOR(j, 0, i)
-			if(a[i] != 15 && a[j] != 15 && a[i] < a[j])
-				sum ++;
+			if(a[i] != BLANK_POS && a[j] != BLANK_POS && a[i] < a[j])
+				sum++;
 
-		if(sum%2 != 0)
+		sum += blank / ROW;
+
+		if(1)
 		{
 			int ans = IDA_Star();
 			if(ans == -1)
 				printf("unsolvable\n");
 			else
-				PrintOutput();
+				PrintOutput(ans);
+			
+			if(t < T-1)
+				printf("\n\n");
 		}
 		else
 			printf("unsolvable\n");
