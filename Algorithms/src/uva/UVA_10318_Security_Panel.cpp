@@ -17,7 +17,7 @@ READ_INPUT(UVA_10318_SECURITY_PANEL)
 
 #define FOR(i, init, cnt) for(int i = init; i < cnt; i++)
 #define MAXN 7
-#define INF 0x3f3f3f3f3f3f3f3fL
+#define INF 0x3f3f3fL
 typedef long long ll;
 
 int sw[3][3];
@@ -25,10 +25,12 @@ int g[MAXN][MAXN];
 int R, C;
 
 int sol[MAXN*MAXN];
+int solAns[MAXN*MAXN][MAXN];
 int fullPatt = 0;
 int endPatt = 0;
 
 int totalPress = 0;
+int totalPressIndex = 0;
 
 int dc[] = { -1, 0, 1, -1, 0, 1, -1, 0, 1 };
 int dr[] = { -1, -1, -1, 0, 0, 0, 1, 1, 1 };
@@ -42,7 +44,7 @@ void reset()
 
 	FOR(i, 0, MAXN)
 		FOR(j, 0, MAXN)
-		g[i][j] = 0, sol[MAXN*i+j] = 0;
+		g[i][j] = 0, sol[MAXN*i+j] = 0, solAns[MAXN*i+j][j] = 0;
 }
 
 bool checkTillIndex(int idx)
@@ -112,19 +114,21 @@ bool solve(int idx, int pressCnt)
 {
 	if(checkTillIndex(R*C-1))
 	{
-		FOR(i, 0, pressCnt)
-			printf("%d ", sol[i]+1);
-		printf("\n");
+		if(pressCnt < totalPress)
+		{
+			FOR(i, 0, pressCnt)
+				solAns[totalPressIndex][i] = sol[i];
+			totalPressIndex++;
+			totalPress = pressCnt; 
+			return false;
+		}
 		return true;
 	}
 
 	if(idx >= R*C) return false;
 
-	//if(checkTillIndex(idx - C - 1) == false)
-	//	return false;
-
-		//Dont press & move to next button
-	if(solve(idx+1, pressCnt)) return true;
+	if(checkTillIndex(idx - C - 2) == false)
+		return false;
 
 	//Use this idx button and apply the pattern
 	ApplyPatt(idx); 
@@ -133,7 +137,8 @@ bool solve(int idx, int pressCnt)
 	if(solve(idx+1, pressCnt+1)) return true;
 	ApplyPatt(idx); //Un-Apply
 
-
+	//Dont press & move to next button
+	if(solve(idx+1, pressCnt)) return true;
 
 	return false;
 }
@@ -161,8 +166,18 @@ int main()
 
 		printf("Case #%d\n", ++t);
 
-		if(solve(0, 0) == false)
+		totalPress = INF;
+		totalPressIndex = 0;
+		solve(0, 0);
+
+		if(totalPress == INF)
 			printf("Impossible.\n");
+		else
+		{
+			FOR(i, 0, totalPress)
+				printf("%d ", solAns[totalPressIndex-1][i]+1);
+			printf("\n");
+		}
 	}
 	return 0;
 }
