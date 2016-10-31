@@ -17,6 +17,9 @@ READ_INPUT(UVA_10318_SECURITY_PANEL)
 
 #define FOR(i, init, cnt) for(int i = init; i < cnt; i++)
 #define MAXN 7
+
+//#define DEBUG
+
 #define INF 0x3f3f3fL
 typedef long long ll;
 
@@ -25,7 +28,7 @@ int g[MAXN][MAXN];
 int R, C;
 
 int sol[MAXN*MAXN];
-int solAns[MAXN*MAXN][MAXN];
+int solAns[MAXN*MAXN][MAXN*MAXN];
 int fullPatt = 0;
 int endPatt = 0;
 
@@ -44,7 +47,11 @@ void reset()
 
 	FOR(i, 0, MAXN)
 		FOR(j, 0, MAXN)
-		g[i][j] = 0, sol[MAXN*i+j] = 0, solAns[MAXN*i+j][j] = 0;
+		g[i][j] = 0;
+
+	FOR(i, 0, MAXN*MAXN)
+		FOR(j, 0, MAXN*MAXN)
+		sol[i] = 0, solAns[i][j] = 0;
 }
 
 bool checkTillIndex(int idx)
@@ -53,7 +60,7 @@ bool checkTillIndex(int idx)
 	int c = idx % C;
 
 	if(r < 0 || c < 0) return true;
-	
+
 	FOR(i, 0, r+1)
 		FOR(j, 0, c+1)
 		if((g[i][j]) == 0)
@@ -61,7 +68,55 @@ bool checkTillIndex(int idx)
 	return true;
 }
 
+int tmp[MAXN][MAXN] = { 0, };
 
+
+void ApplyPatt1(int idx)
+{
+	int r = idx / C;
+	int c = idx % C;
+
+	if(r < 0 || c < 0) return;
+
+	if(c == C-1)
+	{
+		if(r == 0)
+		{
+			tmp[0][C-1] ^= sw[1][1], tmp[1][C-1] ^= sw[2][1];
+			if(C > 1)
+				tmp[0][C-2] ^= sw[1][0], tmp[1][C-2] ^= sw[2][0]; 
+		}
+		else
+		{
+			tmp[r-1][C-1] ^= sw[0][1], tmp[r][C-1] ^= sw[1][1], tmp[r+1][C-1] ^= sw[2][1]; 
+			if(C > 1)
+				tmp[r-1][C-2] ^= sw[0][0], tmp[r][C-2] ^= sw[1][0], tmp[r+1][C-2] ^= sw[2][0]; 
+		}
+	}
+	else if(c == 0)
+	{
+		if(r == 0)
+		{
+			tmp[0][0] ^= sw[1][1], tmp[0][1] ^= sw[1][2]; 
+			if(R > 1)
+				tmp[1][0] ^= sw[2][1], tmp[1][1] ^= sw[2][2]; 
+		}
+		else
+		{
+			tmp[r-1][0] ^= sw[0][1], tmp[r][0] ^= sw[1][1], tmp[r+1][0] ^= sw[2][1]; 
+			tmp[r-1][1] ^= sw[0][2], tmp[r][1] ^= sw[1][2], tmp[r+1][1] ^= sw[2][2]; 
+		}
+	}
+	else
+	{
+		if(r == 0)
+			FOR(j, 0, 3)
+			tmp[r][c+j-1] ^= sw[1][j], tmp[r+1][c+j-1] ^= sw[2][j]; 
+		else
+			FOR(j, 0, 3)
+			tmp[r-1][c+j-1] ^= sw[0][j], tmp[r][c+j-1] ^= sw[1][j], tmp[r+1][c+j-1] ^= sw[2][j]; 
+	}
+}
 
 void ApplyPatt(int idx)
 {
@@ -82,7 +137,7 @@ void ApplyPatt(int idx)
 		{
 			g[r-1][C-1] ^= sw[0][1], g[r][C-1] ^= sw[1][1], g[r+1][C-1] ^= sw[2][1]; 
 			if(C > 1)
-				g[r-1][C-2] ^= sw[0][0], g[r][C-1] ^= sw[1][0], g[r+1][C-1] ^= sw[2][0]; 
+				g[r-1][C-2] ^= sw[0][0], g[r][C-2] ^= sw[1][0], g[r+1][C-2] ^= sw[2][0]; 
 		}
 	}
 	else if(c == 0)
@@ -103,10 +158,10 @@ void ApplyPatt(int idx)
 	{
 		if(r == 0)
 			FOR(j, 0, 3)
-				g[r][c+j-1] ^= sw[1][j], g[r+1][c+j-1] ^= sw[2][j]; 
+			g[r][c+j-1] ^= sw[1][j], g[r+1][c+j-1] ^= sw[2][j]; 
 		else
 			FOR(j, 0, 3)
-				g[r-1][c+j-1] ^= sw[0][j], g[r][c+j-1] ^= sw[1][j], g[r+1][c+j-1] ^= sw[2][j]; 
+			g[r-1][c+j-1] ^= sw[0][j], g[r][c+j-1] ^= sw[1][j], g[r+1][c+j-1] ^= sw[2][j]; 
 	}
 }
 
@@ -118,11 +173,29 @@ bool solve(int idx, int pressCnt)
 		{
 			FOR(i, 0, pressCnt)
 				solAns[totalPressIndex][i] = sol[i];
+#ifdef DEBUG
+			memset(tmp, 0, sizeof(tmp));
+
+			FOR(i, 0, pressCnt)
+			{
+				printf("%d\n", sol[i]);
+				ApplyPatt1(sol[i]);
+				FOR(i, 0, R)
+				{
+					FOR(j, 0, C)
+						if(tmp[i][j] == 1) printf("*");
+						else printf(".");
+						printf("\n");
+				}
+				printf("\n");
+				printf("\n");
+			}
+#endif
 			totalPressIndex++;
 			totalPress = pressCnt; 
 			return false;
 		}
-		return true;
+		return false;
 	}
 
 	if(idx >= R*C) return false;
