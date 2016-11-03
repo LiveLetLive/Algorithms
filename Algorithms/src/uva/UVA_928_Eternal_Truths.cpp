@@ -23,90 +23,66 @@ typedef long long ll;
 int R, C;
 int si, sj, ei, ej;
 int g[MAXN][MAXN];
-int dp[MAXN][MAXN][4][3];
-bool vis[MAXN][MAXN][4][3];
-int totalSteps;
-int stepCnt;
+bool vis[MAXN][MAXN][3];
+
+class Node
+{
+public:
+	Node() {};
+	Node(int i1, int j1, int step1, int stepCnt1) 
+	{
+		i = i1, j = j1, step = step1, stepCnt = stepCnt1;
+	};
+	int i, j, step, stepCnt;
+};
 
 void reset()
 {
-	totalSteps = INF;
-	stepCnt = 0;
-	FOR(i, 0, MAXN)
-		FOR(j, 0, MAXN)
-		g[i][j] = 0;
-
-	FOR(i, 0, MAXN)
-		FOR(j, 0, MAXN)
-		FOR(k, 0, 4)
+	FOR(i, 0, R+1)
+		FOR(j, 0, C+1)
 		FOR(l, 0, 3)
-		dp[i][j][k][l] = INF, vis[i][j][k][l] = 0;
-
+		vis[i][j][l] = 0;
 }
 
 int dr[] = { 0,  0, 1, -1 };
 int dc[] = { 1, -1, 0, 0 };
 
-inline bool isValid(int i , int j)
+int solve1()
 {
-	if(i < 0 || j < 0 || i >= R || j >= C) return false;
-	if(g[i][j] == 0) return false;
+	queue<Node> q;
+	q.push(Node(si, sj, 0, 0));
 
-	return true;
-}
-
-int solve(int i, int j, int dir, int step)
-{
-	if(i == ei && j == ej)
+	while(q.empty() == false)
 	{
-		if(stepCnt < totalSteps)
-			totalSteps = stepCnt;
-		return stepCnt;
-	}
+		Node u = q.front();
+		q.pop();
 
-	if(stepCnt > totalSteps)
-		return INF;
+		if(u.i == ei && u.j == ej)
+			return u.stepCnt;
 
-	if(dp[i][j][dir][step] < INF)
-		return dp[i][j][dir][step];
+		int nStep = (((u.step) % 3) + 1);
 
-	int ans = INF;
-
-	FOR(x, 0, 4)
-	{
-		int nStep = (((step) % 3) + 1);
-		int ni = i + dr[x] * nStep;
-		int nj = j + dc[x] * nStep;
-
-		if(isValid(ni, nj))
+		FOR(x, 0, 4)
 		{
-			if(nStep >= 2)
-			{
-				int ni1 = i + dr[dir] * (nStep-1);
-				int nj1 = j + dc[dir] * (nStep-1);
+			int ni = u.i + dr[x] * nStep;
+			int nj = u.j + dc[x] * nStep;
 
-				if(g[ni1][nj1] == 0) continue;
+			if(ni < 0 || nj < 0 || ni >= R || nj >= C) continue;
+			if(vis[ni][nj][nStep]) continue;
 
-				if(nStep == 3)
-				{
-					int ni1 = i + dr[dir] * (nStep-2);
-					int nj1 = j + dc[dir] * (nStep-2);
+			int jump = 0, bad = 0;
 
-					if(g[ni1][nj1] == 0) continue;
-				}
-			}
+			for(jump = 1; jump <=nStep && bad == 0; jump++)
+				bad = bad || g[u.i+dr[x]*jump][u.j+dc[x]*jump] == 0;
 
-			if(vis[ni][nj][x][nStep]) continue;
+			if(bad) continue;
 
-			vis[ni][nj][x][nStep] = 1;
-			stepCnt++;
-			ans = min(ans, solve(ni, nj, x, nStep)); 
-			vis[ni][nj][x][nStep] = 0;
-			stepCnt--;
+			vis[ni][nj][nStep] = 1;
+			q.push(Node(ni, nj, nStep, u.stepCnt+1));
 		}
 	}
 
-	return dp[i][j][dir][step] = ans;
+	return INF;
 }
 
 
@@ -131,11 +107,11 @@ int main()
 			}
 		}
 
-		int ans = solve(si, sj, 0, 0);
-		if(totalSteps >= INF)
+		int ans = solve1();
+		if(ans >= INF)
 			printf("NO\n");
 		else
-			printf("%d\n", totalSteps);
+			printf("%d\n", ans);
 	}
 	return 0;
 }
