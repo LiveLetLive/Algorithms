@@ -17,13 +17,18 @@ READ_INPUT(UVA_658_ITS_NOT_A_BUG_ITS_A_FEATURE)
 
 #define FOR(i, init, cnt) for(int i = init; i < cnt; i++)
 #define MAXN 20
-#define MAXM 103
-#define INF 0x3f3f3f3fL
-typedef long long ll;
+#define MAXM 105
+#define INF 1000000000
+typedef unsigned int ll;
 
-int check[MAXM][MAXN];
-int result[MAXM][MAXN];
-int t[MAXM];
+int checkMust[MAXM];
+int checkMustNot[MAXM];
+int resultIntro[MAXM];
+int resultRemove[MAXM];
+
+ll t[MAXM];
+ll dp[1 << MAXN];
+bool in_q[1 << MAXN];
 
 int N, M;
 
@@ -31,70 +36,101 @@ class Node
 {
 public:
 	Node() {}
-	Node(int s, int t) { state = s, time = t; }
+	Node(unsigned int s, ll t) { state = s, time = t; }
 	bool operator < (const Node& that) const
 	{
 		return this->time > that.time;
 	}
-	int state;
-	int time;
+	unsigned int state;
+	ll time;
 };
 
 void reset()
 {
 	FOR(i, 0, MAXM)
-		FOR(j, 0, MAXN)
-		check[i][j] = 0, result[i][j] = 0;
+		checkMust[i] = 0, checkMustNot[i] = 0, resultIntro[i] = 0, resultRemove[i] = 0;
+
+	FOR(i, 0, 1 << MAXN)
+		dp[i] = INF, in_q[i] = 0;
 }
 
-int solve()
+ll solve()
 {
-	priority_queue<Node> pq;
+	queue<Node> pq;
 
-	pq.push(Node(-1, 0));
-
+	pq.push(Node((1<<N) - 1, 0));
+	dp[(1<<N) - 1] = 0;
+	in_q[(1<<N) - 1] = 1;
+	
 	while(pq.empty() == false)
 	{
-		Node u = pq.top();
+		Node u = pq.front();
 		pq.pop();
+		in_q[u.state] = 0;
 
-		if(u.state == 0)
-			return u.time;
+		FOR(i, 0, M)
+		{
+			int s = u.state;
 
+			//Check if possible to apply
 
+			//Entry must have
+			if(((~s & checkMust[i]) != 0))
+				continue;
+
+			//Entry must NOT have
+			if(((s & checkMustNot[i]) != 0))
+				continue;
+
+			//Apply it in tmp, check if produce different result
+			int newState = s | resultIntro[i];
+			newState &= ~(resultRemove[i]);
+
+			if(dp[newState] > (dp[s] + t[i]))
+			{
+				if(in_q[newState] != 1)
+					pq.push(Node(newState, (dp[s] + t[i]))), in_q[newState]= 1;
+
+				dp[newState] = dp[s] + t[i];
+			}
+
+		}
 	}
 	return INF;
 }
 
 int main()
 {
+	int test = 0;
 	while(scanf("%d %d ", &N, &M))
 	{
+		if(N == 0 && M == 0)
+			break;
+
 		reset();
 		FOR(i, 0, M)
 		{
-			char str[MAXN] = { 0 };
-			char str1[MAXN] = { 0 };
-			scanf("%d ", t[i]);
-			scanf("%s %s", &str, &str1);
+			char str[MAXN+1] = { 0 };
+			char str1[MAXN+1] = { 0 };
+			scanf("%d ", &t[i]);
+			scanf("%s %s ", &str, &str1);
 			FOR(j, 0, N)
 			{
-				if(str[j] == '0') check[i][j] = 2; 
-				else if(str[j] == '+') check[i][j] = 1; 
-				if(str[j] == '-') check[i][j] = 0; 
+				//						
+				if(str[j] == '+')	checkMust[i] |= (1<<j), checkMustNot[i]  &= ~(1<<j); 
+				else if(str[j] == '-')		checkMust[i] &= ~(1<<j), checkMustNot[i]  |= (1<<j); 
 
-				if(str1[j] == '0') result[i][j] = 2; 
-				else if(str1[j] == '+') result[i][j] = 1; 
-				if(str1[j] == '-') result[i][j] = 0; 
+				//						ORED							ANDED
+				if(str1[j] == '+') resultIntro[i] |= (1 << j),  resultRemove[i] &= ~(1<<j); 
+				else if(str1[j] == '-')		resultIntro[i] &= ~(1 << j), resultRemove[i] |= (1<<j); 
 			}
 		}
 
-		int ans = solve();
+		ll ans = solve();
 
-		if(ans >= INF)
-			printf("Bugs cannot be fixed.\n");
-		else
-			printf("Fastest sequence takes %d seconds.\n", ans);
+		printf("Product %d\n",++test);
+		if (dp[0]==INF) printf("Bugs cannot be fixed.\n\n");
+		else printf("Fastest sequence takes %d seconds.\n\n",dp[0]);
 	}
 	return 0;
 }
