@@ -17,13 +17,14 @@ READ_INPUT(UVA_10913_WALKING_ON_A_GRID)
 
 #define FOR(i, init, cnt) for(int i = init; i < cnt; i++)
 #define MAXN 77
-#define INF 0x3f3f3f3f3f3f3f3fL
-typedef long long ll;
+#define INF 0x3f3f3f3fL
+typedef int ll;
+#define MAXNEG 8
 
 int N, K;
 int g[MAXN][MAXN];
-ll dp[MAXN][MAXN][6][3];
-int vis[MAXN][MAXN][6][3];
+ll dp[MAXN][MAXN][MAXNEG][3];
+int vis[MAXN][MAXN][MAXNEG][3];
 
 int foundOnce = false;
 
@@ -33,7 +34,7 @@ void reset()
 	FOR(i, 0, MAXN)
 		FOR(j, 0, MAXN)
 	{
-		FOR(k, 0, 6)
+		FOR(k, 0, MAXNEG)
 			FOR(d, 0, 3)
 			dp[i][j][k][d] = -INF, vis[i][j][k][d] = 0;
 		g[i][j] = 0;
@@ -45,29 +46,20 @@ int dc[] = { 0, -1, 1 };
 
 ll solve(int i, int j, int remK, int prevDir)
 {
-	if(i == N-1 && j == N-1)
-	{
-		foundOnce = true;
-
-		if(g[i][j] < 0)
-			if(remK)
-				return g[i][j];
-			else
-				return -INF;
-		else
-			return g[i][j];
-	}
-
-	if(remK < 0)
-		return -INF;
+	int &ans = dp[i][j][remK][prevDir];
 
 	if(vis[i][j][remK][prevDir])
 		return dp[i][j][remK][prevDir];
 
-	if(dp[i][j][remK][prevDir] != -INF)
-		return dp[i][j][remK][prevDir];
+	if(remK > K) return ans = -INF;
+	
+	if(i == N-1 && j == N-1)
+	{
+		foundOnce = true;
+		return ans = g[N-1][N-1];;
+	}
 
-	ll ans = -INF;
+	ans = -INF;
 
 	FOR(x, 0, 3)
 	{
@@ -80,17 +72,17 @@ ll solve(int i, int j, int remK, int prevDir)
 		if((prevDir + x) == 3)
 			continue;
 
-		if(g[i][j] < 0)
-			ans = max(ans, g[i][j] + solve(ni, nj, remK - 1, x));
-		else
-			ans = max(ans, g[i][j] + solve(ni, nj, remK, x));
+		int tmp = (g[ni][nj] < 0);
+		int sum = solve(ni, nj, remK + tmp, x);
+
+		if(sum != -INF)
+			ans = max(ans, sum + g[i][j]);
 	}
 
 	vis[i][j][remK][prevDir] = 1;
 
 	return dp[i][j][remK][prevDir] = ans;
 }
-
 
 int main()
 {
@@ -106,10 +98,10 @@ int main()
 			FOR(j, 0, N)
 			scanf("%d ", &g[i][j]);
 
-		ll ans = solve(0, 0, K, 0);
+		ll ans = solve(0, 0, (g[0][0] < 0), 0);
 
 		if(foundOnce)
-			printf("Case %d: %lld\n", ++T, ans);
+			printf("Case %d: %d\n", ++T, ans);
 		else
 			printf("Case %d: impossible\n", ++T);
 	}
