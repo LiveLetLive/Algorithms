@@ -51,14 +51,15 @@ inline int Strlen(char* s)
 }
 inline int Strcmp(char* s1, char* s2)
 {
-	int l1 = strlen(s1);
-	int l2 = strlen(s2);
+	//int l1 = Strlen(s1);
+	//int l2 = Strlen(s2);
 
-	int len = (l1 > l2) ? l1 : l2;
+	//int len = (l1 > l2) ? l1 : l2;
 
-	while(*s1 == *s2 && len--);
+	while(*s1 && *s2 && *s1 == *s2)
+		s1++, s2++;
 
-	if(len == -1)
+	if(*s1 == 0 && *s2 == 0)
 		return 0;
 	else
 		return 1;
@@ -72,8 +73,8 @@ public:
 	}
 	Node(char *k, char* v) 
 	{
-		strcpy(key, k);
-		strcpy(val, v);
+		Strcpy(key, k);
+		Strcpy(val, v);
 		next = NULL;
 	}
 	char key[11];
@@ -97,7 +98,7 @@ Node* hash_find(char* key)
 	{
 		while(ptr != NULL)
 		{
-			if(strcmp(ptr->key, key) == 0)
+			if(Strcmp(ptr->key, key) == 0)
 				return ptr;
 			ptr = ptr->next;
 		}
