@@ -16,181 +16,217 @@ READ_INPUT(SELF_ELECTRONIC_GADGET)
 	using namespace std;
 
 #define FOR(i, init, cnt) for(int i = init; i < cnt; i++)
-#define MAXN 10003
+#define MAXN 10000
 #define INF 0x3f3f3f3fL
 typedef long long ll;
 
+int mpool[MAXN];
+int pool[MAXN];
+char guess[4];
 
-int b[10];
-int bcnt = 0;
-int w[10];
-int wcnt = 0;
-
-int sw[10][4];
-int currTryIdx = 0;
-int currTryVal = 1;
-int stage = 0;
-int oldInput[4];
-
-
-typedef struct
+void reset()
 {
-	int har;
-	int iso;
-}MatchRes;
-
-typedef struct Result
-{
-	int in[4];
-	MatchRes m;
-}Res;
-
-Res steps[100];
-int stepIdx;
-
-void PrintDebug()
-{
-	FOR(i, 0, stepIdx)
-	{
-		printf("{ ");
-		FOR(j, 0, 4)
-			printf("%d, ", steps[i].in[j]);
-		printf("[%d, %d]", steps[i].m.har, steps[i].m.iso);
-		printf(" }\n");
-	}
+	FOR(i, 0, MAXN)
+		pool[i] = mpool[i];
 }
 
-void init()
+int getScore()
 {
-	FOR(i, 0, 100)
-	{
-		steps[i].m.har = 0;
-		steps[i].m.iso = 0;
-		FOR(j, 0, 4)
-			steps[i].in[j] = -1;
-	}
-
-	stepIdx = 0;
-
-	FOR(i, 0, 10)
-	{
-		b[i] = -1, w[i] = -1, oldInput[i] = -1;
-		FOR(j, 0, 4)
-			sw[i][j] = 1;
-	}
-	currTryIdx = 0;
-	currTryVal = 1;
-	stage = 0;
-	bcnt = 0;
-	wcnt = 0;
-}
-
-MatchRes match(int inputD[])
-{
-	MatchRes r = {0};
-	return r;
-}
-
-void UpdateStep(int in[], MatchRes m)
-{
-	int idx = stepIdx++;
-	steps[idx].m.har = m.har;
-	steps[idx].m.iso = m.iso;
-	FOR(j, 0, 4)
-		steps[idx].in[j] = in[j];
-}
-
-void HarIsoTrivialCheck(MatchRes n, int in[])
-{
-	if(n.har == 0)
-		FOR(i, 0, 4)
-		sw[in[i]][i] = 0;
-	else if(n.har == 4)
-		FOR(i, 0, 4)
-		w[wcnt++] = in[i];
-
-	if(n.iso == 0)
-		FOR(i, 0, 4)
-		b[bcnt++] = in[i];
-	else if(n.iso == 4)
-		FOR(i, 0, 4)
-		w[wcnt++] = in[i];
-}
-
-void UpdateAllDB(int in[], int oldin[], MatchRes n, MatchRes o)
-{
-	//Just update database without decision
-	if(oldin == NULL)
-	{
-
-		UpdateStep(in, n);
-	}
-
-	//Make decision 
-}
-
-int getStatus(MatchRes n)
-{
-	if(n.har == 4)
-		return 2;
-	if(n.iso == 4)
-		return 1;
 	return 0;
 }
 
-void solve(int inputD[])
+int countOccur(char num[4], char digit)
 {
-	init();
+	int cnt = 0;
+	FOR(i, 0, 4)
+		if(num[i] == digit)
+			cnt++;
+	return cnt;
+}
 
-	inputD[0] = 0;
-	inputD[1] = 7;
-	inputD[2] = 8;
-	inputD[3] = 9;
-
-	MatchRes or = match(inputD);
-
-	int ret = getStatus(or);
-	if(ret == 2) return;
-	else if(ret == 1) stage = 1;
-	
-	UpdateAllDB(inputD, NULL, or, or);
-
-	MatchRes r = { 0, 0};
-
-	while(1)
+void itoa(int i, char *str)
+{
+	FOR(k, 0, 4) str[k] = '0';
+	int cnt = 1;
+	int j = i;
+	while(j)
 	{
-		//Finding whitelist
-		if(stage == 0)
-		{
-			r = match(inputD);
-			int ret = getStatus(r);
-			if(ret == 2) return;
-			else if(ret == 1) stage = 1;
-		
-			UpdateAllDB(inputD, oldInput, r, or);
+		str[4 - cnt++] = (j % 10) + '0';
 
-			or = r;
-			FOR(i, 0, 4) oldInput[i] = inputD[i];
-			continue;
-		}
-		// Finding indexes
-		else
-		{
-		}
-		//update all b, w, sw
-
+		j /= 10;
 	}
 }
 
+int mul[] =
+{
+	0, 
+	10,
+	100,
+	1000
+};
+
+int countCandidateinPool()
+{
+	int cnt = 0;
+	FOR(i, 0, MAXN)
+		if(pool[i])
+			cnt++;
+	return cnt;
+}
+
+int atoi(char *str)
+{
+	int j = 0;
+	FOR(cnt, 0, 4)
+	{
+		j *= mul[cnt];
+		int k = str[3 - cnt] + '0';
+		j += k;
+	}
+
+	return j;
+}
+
+int getNextCandidate()
+{
+	FOR(i, 0, MAXN)
+		if(pool[i])
+			return i;
+}
+
+
+void fillPool()
+{
+	int cnt = 0;
+	FOR(i, 0, MAXN)
+	{
+		char str[4] = {'0', '0', '0', '0'};
+
+		itoa(i, str);
+
+		FOR(j, 0, 4)
+		{
+			if(countOccur(str, str[j]) > 1)
+			{
+				mpool[i] = 0;
+				break;
+			}
+			else
+				mpool[i] = 1;
+		}
+
+		if(mpool[i])
+		{
+			cnt++;
+		}
+
+	}
+
+	//printf("total search %d", cnt);
+
+}
+
+
+char secret[5];
+
+typedef struct res
+{
+	int bull;
+	int cow;
+}RESULT;
+
+RESULT match(char str[4])
+{
+	RESULT res;
+	int b = 0, c = 0;
+
+	FOR(i, 0, 4)
+	{
+		if(secret[i] == str[i]) b++;
+
+		FOR(j, 0, 4)
+		{
+			if(secret[i] == str[j])
+				c++;
+		}
+	}
+
+	res.bull = b;
+	res.cow = c;
+	return res;
+}
+
+RESULT calcScore(char str[4], char str1[4])
+{
+	RESULT res;
+	int b = 0, c = 0;
+
+	FOR(i, 0, 4)
+	{
+		if(str1[i] == str[i]) b++;
+
+		FOR(j, 0, 4)
+		{
+			if(str1[i] == str[j])
+				c++;
+		}
+	}
+
+	res.bull = b;
+	res.cow = c;
+	return res;
+}
+
+
+void prune(char guess[4], RESULT r)
+{
+	FOR(i, 0, MAXN)
+	{
+		if(pool[i])
+		{
+			char s[4];
+			itoa(i, s);
+
+			RESULT r1 = calcScore(s, guess);
+
+			if((r1.bull != r.bull) || (r1.cow != r.cow))
+				pool[i] = 0;
+		}
+	}
+}
 
 int main()
 {
 	int T;
+	fillPool();
+
 	scanf("%d ", &T);
-	FOR(t, 0, T)
+
+	FOR(i, 0, T)
 	{
+		reset();
 
+		scanf("%s ", &secret);
 
+		while(1)
+		{
+			char guessStr[4];
+
+			//printf("Candidate Remain = %d\n", countCandidateinPool());
+
+			int guess = getNextCandidate();
+
+			itoa(guess, guessStr);
+
+			RESULT res = match(guessStr);
+			if(res.bull == 4)
+			{
+				printf("1\n");
+				break;
+			}
+
+			prune(guessStr, res);
+		}
 	}
 	return 0;
 }
