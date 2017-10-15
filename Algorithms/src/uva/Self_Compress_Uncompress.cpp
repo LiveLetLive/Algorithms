@@ -49,6 +49,7 @@ void generateTC()
 		N = N - N % 6;
 
 		length[i] = N; 
+
 		for(int j = 0; j < N; j++)
 			TC[i][j] = c[rand() % 31];
 	}
