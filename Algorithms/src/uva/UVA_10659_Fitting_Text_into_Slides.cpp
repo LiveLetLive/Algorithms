@@ -127,7 +127,7 @@ int main()
 		scanf("%d ", &X);
 		scanf("%d ", &Y);
 
-		int ans = fsize();
+		int ans = fsize2();
 
 		if(ans == -1)
 			printf("No solution\n");

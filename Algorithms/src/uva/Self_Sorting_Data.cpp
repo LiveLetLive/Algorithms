@@ -265,6 +265,4 @@ void run(int size)
 	load(0, size);
 	return;
 }
-
-
 #endif
